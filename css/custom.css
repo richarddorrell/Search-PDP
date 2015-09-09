@@ -104,7 +104,9 @@ input[type=text]:focus {
 .dropdown option {
   padding: 10px; }
 
-.results { margin-top: 60px; }
+.results { margin-top: 60px; font-family: argosbook; }
+.results span { margin: 15px 0; float: left; font-weight: bold; }
+.results span + span { float: right; font-weight: normal; }
 
 .filters { border-bottom: 1px solid #CCC; padding-bottom: 10px; }
 
