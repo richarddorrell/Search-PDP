@@ -88,7 +88,7 @@
 
 .mainheading { font-size: 20px; font-family: argosbook; }
 .subheading { font-size: 20px; font-family: argoscondensed_extrabold; }
-.prodtitle { font-size: 15px; font-family: argosbook; margin-top: 0; font-weight: normal; }
+.prodtitle { font-size: 15px; font-family: argosbook; margin: 0 0 5px; font-weight: normal; }
 .mainprice { font-size: 30px; font-family: argoscondensed_extrabold; }
 .tlpprice { font-size: 30px; font-family: argoscondensed_extrabold; }
 .tlptitles { font-size: 18px; font-family: argosbook; }
@@ -145,6 +145,9 @@ body {
     height: 60px;
     border-bottom: 1px solid #CCC;
     background-color: #F0F0F0;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 
 .headerbar {
