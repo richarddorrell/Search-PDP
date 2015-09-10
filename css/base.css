@@ -1,3 +1,5 @@
+html { height: 100%; width: 100%; }
+
 @font-face {
 	font-family: argosbold_italic;
 	src: url(../fonts/argos-bolditalic-webfont.eot);
@@ -99,9 +101,9 @@
 
 .container {
 	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-    clear: both;
+	padding: 0 15px;
+    display: table;
+	box-sizing: border-box;
 }
 .columns { position: relative; }
 .eight, .eleven, .five, .four, .nine, .one, .seven, .ten, .three, .twelve, .two {

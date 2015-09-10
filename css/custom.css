@@ -1,3 +1,31 @@
+.eight, .eleven, .five, .four, .nine, .one, .seven, .ten, .three, .twelve, .two, .six {
+	margin-right: 4.8543%;
+	margin-left: 0;
+	float: left;
+}
+.container:after {
+	content: " ";
+	display: block
+}
+.eight:after, .eight:before, .eleven:after, .eleven:before, .five:after, .five:before, .four:after, .four:before, .nine:after, .nine:before, .one:after, .one:before, .seven:after, .seven:before, .ten:after, .ten:before, .three:after, .three:before, .twelve:after, .twelve:before, .two:after, .two:before {
+	display: table;
+	content: ''
+}
+.one { width: 3.8834% }
+.two { width: 12.6211% }
+.three { width: 21.3588% }
+.four {	width: 30.0965% }
+.five {	width: 38.8342% }
+.six { width: 47.5716%; }
+.seven { width: 56.3096% }
+.eight { width: 65.0473% }
+.nine { width: 73.785% }
+.ten { width: 82.5227% }
+.eleven { width: 91.2604% }
+.twelve { width: 100% }
+
+.columns:last-child { margin-right: 0; }
+
 *,
 :after,
 :before {
@@ -9,16 +37,6 @@
 .fulfilment-tab { width: 45.5% }
 
 body, .grid-example { width: 100% }
-
-.grid-example .container div {
-  background: pink;
-}
-.grid-example .container {
-  background: #f4f4f4;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 2px;
-}
 
 .view p { 
     display: block;
@@ -112,7 +130,7 @@ input[type=text]:focus {
 
 .product { padding: 10px 0; min-height: 77px; border-bottom: 1px solid #CCC; display: flex; }
 .product .columns {  }
-.product div.prodimg { background: transparent url("../img/product.jpg") center no-repeat; width: 100%; padding: 50% 0; background-size: contain; }
+.product div.prodimg { background: #F5F5F5 url("../img/product.jpg") center no-repeat; width: 100%; padding: 50% 0; background-size: contain; }
 .product span.mainprice { float: left; margin-right: 5px; }
 .product .otherpricing { line-height: 0.9em; padding-top: 1px; }
 
