@@ -143,3 +143,8 @@ input[type=text]:focus {
 
 .product .reviews { background: #fcd439 url("../img/review-stars@1x.png") no-repeat; width: 106px; height: 16px; margin-bottom: 5px; font-family: argosbook; color: #AAA; font-size: 12px; line-height: 1.5em; }
 .product .reviews span { margin-left: 110px; }
+
+.product .content { 
+	display: flex;
+  	flex-direction: column;
+  	justify-content: center; }
