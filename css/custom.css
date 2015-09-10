@@ -14,9 +14,9 @@
 .one { width: 3.8834% }
 .two { width: 12.6211% }
 .three { width: 21.3588% }
-.four {	width: 30.0965% }
+.four {	width: 30.0963% }
 .five {	width: 38.8342% }
-.six { width: 47.5716%; }
+.six { width: 47.5719%; }
 .seven { width: 56.3096% }
 .eight { width: 65.0473% }
 .nine { width: 73.785% }
@@ -66,7 +66,8 @@ body, .grid-example { width: 100% }
   text-transform: uppercase; 
   padding: 0 10px; 
   font-size: 15px; 
-  line-height: 30px; }
+  line-height: 30px;
+  box-sizing: border-box;  }
 
 .primary { 
   height: 40px; 
@@ -91,17 +92,23 @@ body, .grid-example { width: 100% }
   color: #FFF; }
 
 a.field {
-  height: 35px;
+  height: 38px;
   line-height: 36px;
 }
 
 input[type=text], select {
-  height: 35px;
+  height: 38px;
   border: 1px solid #CCC;
   border-bottom: 3px solid #CCC;
   font-family: argosbook;
   padding: 0 10px;
-  font-size: 16px; }
+  font-size: 16px; 
+  box-sizing: border-box; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  }
 
 input[type=text]:focus {
   margin: 1px 1px 15px 1px;
@@ -114,11 +121,11 @@ input[type=text]:focus {
     margin: 1px 3px 15px 3px; }}
 
 .dropdown { 
-  width: 140px; overflow: hidden; border-right: 1px solid #CCC; }
+  width: 140px; overflow: hidden; /*border-right: 1px solid #CCC;*/ }
 .dropdown select { 
-  width: 160px; background: transparent url("../img/dropdown.png") no-repeat 80% 50%; }
+  width: 160px; background: transparent url("../img/dropdown.png") no-repeat 95% 50%; }
 .dropdown select:hover { 
-  cursor: pointer; background: transparent url("../img/dropdown_focus.png") no-repeat 80% 50%; }
+  cursor: pointer; background: transparent url("../img/dropdown_focus.png") no-repeat 95% 50%; }
 .dropdown option {
   padding: 10px; }
 

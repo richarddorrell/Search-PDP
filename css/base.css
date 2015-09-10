@@ -150,6 +150,7 @@ body {
     position: fixed;
     z-index: 100;
     width: 100%;
+	min-width: 320px;
 }
 
 .headerbar {
