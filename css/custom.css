@@ -168,7 +168,13 @@ input[type=text]:focus {
 
 .accordion {
     width: 100%;
-    overflow: hidden;
+    overflow: scroll;
+    height: 100%;
+    position: absolute;
+    -webkit-transition:height 0.5s ease-out;
+    -moz-transition:height 0.5s ease-out;
+    -o-transition:height 0.5s ease-out;
+    transition:height 0.5s ease-out;
 }
 
 .accordion section {

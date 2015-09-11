@@ -245,11 +245,14 @@
         
         <script>
             $("div.filters-overlay").hide();
+            $("div.filters-overlay .accordion").css("top","100%");
             $("#hidefilters").click(function(){
                 $("div.filters-overlay").hide();
+                $("div.filters-overlay .accordion").css("top","100%");
             });
             $("#showfilters").click(function(){
                 $("div.filters-overlay").show();
+                $("div.filters-overlay .accordion").css("top","0");
             });
         </script>
         
