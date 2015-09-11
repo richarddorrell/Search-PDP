@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <title>Argos test template</title>
     </head>
 	
@@ -45,7 +46,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="columns three"><a class="button field fullwidth">Filters</a></div>
+                <div class="columns three"><a class="button field fullwidth" id="showfilters">Filters</a></div>
                 <div class="columns two"><a class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
             </div>
             
@@ -125,9 +126,106 @@
                 </div>
             </div>
             
+        </div>
             
+        <div class="filters-overlay">
+            <div class="accordion">
+                <section id="colour">
+                    <h3><a href="#colour">Colour</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+                <section id="size">
+                    <h3><a href="#size">Screen Size (inches)</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+                <section id="hdtype">
+                    <h3><a href="#hdtype">HD Type</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+                <section id="nonhdtype">
+                    <h3><a href="#nonhdtype">Non HD Type</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+                <section id="brands">
+                    <h3><a href="#brands">Brands</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+                <section id="3d">
+                    <h3><a href="#3d">3D</a></h3>
+                    <form>
+                        <input type="checkbox" name="colour" value="Blue">
+                        <label for="check1">Blue</label><br/>
+                        <input type="checkbox" name="colour" value="Red">
+                        <label for="check1">Red</label><br/>
+                        <input type="checkbox" name="colour" value="Green">
+                        <label for="check1">Green</label><br/>
+                        <input type="checkbox" name="colour" value="Yellow">
+                        <label for="check1">Yellow</label><br/>
+                    </form>
+                </section> 
+            </div>
+            <div class="sticky">
+                <a class="button primary">Apply</a>
+                <a class="button" id="hidefilters">Cancel</a>
+            </div>
         </div>
         
         <footer></footer>
+        
+        <script>
+            $("div.filters-overlay").hide();
+            $("#hidefilters").click(function(){
+                $("div.filters-overlay").hide();
+            });
+            $("#showfilters").click(function(){
+                $("div.filters-overlay").show();
+            });
+        </script>
+        
     </body>
 </html>
