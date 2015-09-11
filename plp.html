@@ -35,7 +35,7 @@
             </div>
             
             <div class="twelve filters">
-                <div class="columns seven">
+                <div class="columns six">
                     <div class="dropdown" style="width: 100%">
                         <select style="width: 100%">
                             <option value="dropdown">Relevancy</option>
@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <div class="columns three"><a class="button field fullwidth" id="showfilters">Filters</a></div>
-                <div class="columns two"><a class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
+                <div class="columns three"><a class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
             </div>
             
             <div class="twelve product">
@@ -254,6 +254,11 @@
                 $("div.filters-overlay").show();
                 $("div.filters-overlay .accordion").css("top","0");
             });
+        </script>
+        
+        <script>
+            var filtersHeight = $(window).height() - 60;
+            $("div.filters-overlay").css("min-height",filtersHeight);
         </script>
         
     </body>

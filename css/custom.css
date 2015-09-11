@@ -41,7 +41,7 @@ body, .grid-example { width: 100% }
 .view p { 
     display: block;
     width: 22px;
-    margin: 6px auto;
+    margin: 11px auto;
 }
 
 .view span { 
@@ -58,7 +58,7 @@ body, .grid-example { width: 100% }
   background-color: #FFF;
   border: 1px solid #CCC;
   border-bottom: 3px solid #CCC;
-  height: 30px;
+  height: 48px;
   display: inline-block;
   float: left;
   font-family: argoscondensed_extrabold; 
@@ -66,17 +66,17 @@ body, .grid-example { width: 100% }
   text-transform: uppercase; 
   padding: 0 10px; 
   font-size: 15px; 
-  line-height: 30px;
+  line-height: 48px;
   box-sizing: border-box;  }
 
 .primary { 
-  height: 40px; 
+  height: 48px; 
   font-size: 20px; 
   background-color: #00AA50; 
   color: #FFF; 
   border: none; 
   border-bottom: 3px solid #CCC; 
-  line-height: 40px; 
+  line-height: 48px; 
   padding: 0 15px; }
 
 .fullwidth {
@@ -92,12 +92,12 @@ body, .grid-example { width: 100% }
   color: #FFF; }
 
 a.field {
-  height: 38px;
-  line-height: 36px;
+  height: 48px;
+  line-height: 48px;
 }
 
 input[type=text], select {
-  height: 38px;
+  height: 48px;
   border: 1px solid #CCC;
   border-bottom: 3px solid #CCC;
   font-family: argosbook;
@@ -155,6 +155,7 @@ input[type=text]:focus {
     top: 60px;
     background-color: #FFF;
     z-index: 50;
+    overflow: scroll;
 }
 
 .filters-overlay .sticky {
@@ -178,7 +179,7 @@ input[type=text]:focus {
 .accordion {
     width: 100%;
     overflow: scroll;
-    height: 100%;
+    min-height: 100%;
     position: absolute;
     -webkit-transition:height 0.5s ease-out;
     -moz-transition:height 0.5s ease-out;
@@ -190,14 +191,15 @@ input[type=text]:focus {
     float: left;
     overflow: hidden;
     width:100%; 
-    height:40px; 
+    height:48px; 
     -webkit-transition:height 0.5s ease-out;
     -moz-transition:height 0.5s ease-out;
     -o-transition:height 0.5s ease-out;
     transition:height 0.5s ease-out;
+    border-top: 1px solid #CCC;
 }
 .accordion :target{ 
-     height:235px; 
+     height:245px; 
      width:100%;
 }
 .accordion section form {
@@ -210,11 +212,15 @@ input[type=text]:focus {
     position:relative; 
     left:0;
     margin: 0;
-    padding: 10px;
+    padding: 0 10px;
     background-color: #F0F0F0;
     border-bottom: 1px solid #CCC;
     font-family: argosbook;
     font-weight: normal;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .accordion section:after{ 
       left:810px;
