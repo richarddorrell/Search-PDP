@@ -199,7 +199,6 @@ input[type=text]:focus {
     line-height: 48px;
     display:inline-block;
     border-bottom:1px solid #ccc;
-    background:#F0F0F0 url("../img/icn-plus.png") no-repeat 95% 50%;
     transition:all linear 0.15s;
     font-family: argosbook;
     font-weight: normal;
@@ -208,11 +207,28 @@ input[type=text]:focus {
     font-family: argosbook;
     text-decoration: none;
 }
+
+.accordion-section-title span {    
+    background:url("../img/icn-plus.png") no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin: 18px 0;
+}
  
 .accordion-section-title.active {
     /* Type */
     text-decoration:none;
-    background:#F0F0F0 url("../img/icn-minus.png") no-repeat 95% 50%;
+}
+
+.accordion-section-title.active span {   
+    background:url("../img/icn-minus.png") no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 12px;
+    float: right;
+    margin: 18px 0;
 }
  
 .accordion-section:last-child .accordion-section-title {
