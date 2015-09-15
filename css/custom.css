@@ -199,22 +199,25 @@ input[type=text]:focus {
     line-height: 48px;
     display:inline-block;
     border-bottom:1px solid #ccc;
-    background:#F0F0F0;
+    background:#F0F0F0 url("../img/icn-plus.png") no-repeat 95% 50%;
     transition:all linear 0.15s;
     font-family: argosbook;
     font-weight: normal;
     /* Type */
     color:#333;
     font-family: argosbook;
+    text-decoration: none;
 }
  
-.accordion-section-title.active, .accordion-section-title:hover {
+.accordion-section-title.active {
     /* Type */
     text-decoration:none;
+    background:#F0F0F0 url("../img/icn-minus.png") no-repeat 95% 50%;
 }
  
 .accordion-section:last-child .accordion-section-title {
     border-bottom:none;
+    
 }
  
 /*----- Section Content -----*/
