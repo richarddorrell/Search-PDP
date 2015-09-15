@@ -13,6 +13,9 @@
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
         <script>
@@ -155,6 +158,13 @@
             </div>
             
         </div>
+        
+        <div class="img-carousel">
+            <div><img src="img/prod-img/prod1.jpg"/></div>
+            <div><img src="img/prod-img/prod2.jpg"/></div>
+            <div><img src="img/prod-img/prod3.jpg"/></div>
+            <div><img src="img/prod-img/prod4.jpg"/></div>
+        </div>
             
         <div class="filters-overlay">
             <div class="filters-inner">
@@ -162,128 +172,128 @@
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-1">Colour</a>
                         <div id="accordion-1" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-2">Screen Size (inches)</a>
                         <div id="accordion-2" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-3">HD Type</a>
                         <div id="accordion-3" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-4">Non HD Type</a>
                         <div id="accordion-4" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-5">Brands</a>
                         <div id="accordion-5" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-6">3D</a>
                         <div id="accordion-6" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-7">By Energy Efficiency Rating</a>
                         <div id="accordion-7" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-8">Smart TV</a>
                         <div id="accordion-8" class="accordion-section-content">
-                        <form>
-                            <input type="checkbox" name="colour" value="Blue">
-                            <label for="check1">Blue</label><br/>
-                            <input type="checkbox" name="colour" value="Red">
-                            <label for="check1">Red</label><br/>
-                            <input type="checkbox" name="colour" value="Green">
-                            <label for="check1">Green</label><br/>
-                            <input type="checkbox" name="colour" value="Yellow">
-                            <label for="check1">Yellow</label><br/>
-                        </form>
+                            <form>
+                                <input type="checkbox" name="colour" value="Blue">
+                                <label for="check1">Blue</label><br/>
+                                <input type="checkbox" name="colour" value="Red">
+                                <label for="check1">Red</label><br/>
+                                <input type="checkbox" name="colour" value="Green">
+                                <label for="check1">Green</label><br/>
+                                <input type="checkbox" name="colour" value="Yellow">
+                                <label for="check1">Yellow</label><br/>
+                            </form>
                         </div><!--end .accordion-section-content-->
                     </div><!--end .accordion-section-->
                 </div>
-                <div class="sticky">
-                    <a class="button primary">Apply</a>
-                    <a class="button" id="hidefilters">Cancel</a>
-                </div>
+            </div>
+            <div class="sticky">
+                <a class="button primary">Apply</a>
+                <a class="button" id="hidefilters">Cancel</a>
             </div>
         </div>
         
@@ -309,6 +319,15 @@
         var filtersInnerHeight = filtersHeight - 60;
         $("div.filters-overlay").css("height",filtersHeight);
         $("div.filters-inner").css("height",filtersInnerHeight);
+    </script>
+        
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.img-carousel').slick({
+            });
+        });
     </script>
         
     </body>

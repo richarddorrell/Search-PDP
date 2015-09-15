@@ -154,7 +154,6 @@ input[type=text]:focus {
     top: 60px;
     background-color: #FFF;
     z-index: 50;
-    overflow: scroll;
 }
 
 .filters-overlay .sticky {
@@ -178,6 +177,7 @@ input[type=text]:focus {
 .filters-inner {
     overflow-y: scroll;
     width: 100%;
+    position: fixed;
 }
 
 .accordion, .accordion * {
@@ -257,3 +257,15 @@ label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+
+.img-carousel {
+    height: 300px;
+    width: 100%;
+    clear: both;
+}
+.img-carousel img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    
+}
