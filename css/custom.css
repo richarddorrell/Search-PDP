@@ -36,8 +36,6 @@
 
 .fulfilment-tab { width: 45.5% }
 
-body, .grid-example { width: 100% }
-
 .view p { 
     display: block;
     width: 22px;
@@ -151,9 +149,18 @@ input[type=text]:focus {
 .filters-overlay {
     width: 100%;
     position: absolute;
-    top: 60px;
     background-color: #FFF;
     z-index: 50;
+    -webkit-animation-duration: 0.2s;
+    -webkit-animation-name: filterslide;  
+}
+
+@-webkit-keyframes filterslide {
+    100% { top: 60px; }
+}
+
+@keyframes filterslide {
+    100% { top: 60px; }
 }
 
 .filters-overlay .sticky {
@@ -287,4 +294,40 @@ label {
     height: auto;
     margin: 0 auto;
     
+}
+
+.pdp-overlay {
+    position: absolute;
+    z-index: 50;  
+}
+
+.pdp-inner {
+    overflow-y: scroll;
+    position: fixed;
+    background-color: #FFF;
+     transform: translateX(100%);
+    -webkit-transform: translateX(100%);  
+}
+
+.pdp-in {
+    animation: pdp-in 0.5s forwards;
+    -webkit-animation: pdp-in 0.5s forwards;
+}
+
+.pdp-out {
+    animation: pdp-out 0.5s forwards;
+    -webkit-animation: pdp-out 0.5s forwards;
+}
+
+@-webkit-keyframes pdp-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes pdp-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes pdpslide {
+    100% { left: 0px; }
 }

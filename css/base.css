@@ -137,7 +137,6 @@ body {
     background-color: #FFF;
     padding: 0;
     margin: 0;
-    min-width: 320px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

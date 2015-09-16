@@ -82,22 +82,24 @@
             </div>
             
             <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
+                <a id="showpdp" class="twelve">
+                    <div class="columns four">
+                        <div class="prodimg"></div>
+                    </div>
+                    <div class="columns eight content">
+                        <div>
+                            <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
+                            <div class="reviews">
+                                <span>(0)</span> 
+                            </div>
+                            <span class="mainprice">&pound;49.99</span>
+                            <div class="otherpricing">
+                                <span class="wasprice">was &pound;53.99</span><br/>
+                                <span class="saving">save &pound;4.00</span>
+                            </div>
                         </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
-                </div>
+                    </div>
+                </a>
             </div>
             
             <div class="twelve product">
@@ -272,13 +274,6 @@
             </div>
             
         </div>
-        
-        <!--<div class="img-carousel">
-            <div><img src="img/prod-img/prod1.jpg"/></div>
-            <div><img src="img/prod-img/prod2.jpg"/></div>
-            <div><img src="img/prod-img/prod3.jpg"/></div>
-            <div><img src="img/prod-img/prod4.jpg"/></div>
-        </div>-->
             
         <div class="filters-overlay">
             <div class="filters-inner">
@@ -419,28 +414,84 @@
             </div>
         </div>
         
+        <div class="pdp-overlay">
+            <div class="pdp-inner">
+                <div class="container">
+                    <a id="hidepdp">HIDE</a>
+                </div>
+                <div class="img-carousel twelve">
+                    <div><img src="img/prod-img/prod1.jpg"/></div>
+                    <div><img src="img/prod-img/prod2.jpg"/></div>
+                    <div><img src="img/prod-img/prod3.jpg"/></div>
+                    <div><img src="img/prod-img/prod4.jpg"/></div>
+                </div>
+                <div class="container prodinfo">
+                    <div>
+                        <h1 class="ten">ColourMatch leather effect tub sofa - Apple Green</h1>
+                        <span class="catno two">257/6800</span>
+                    </div>
+                    <div>
+                        <div class="price six">&pound;148.99</div>
+                        <div class="six">
+                            <span class="wasprice">&pound;199.99</span>
+                            <span class="saveprice">&pound;51.00</span>
+                        </div>
+                    </div>
+                    <div class="credit twelve">Buy now, pay 6 months later with the <strong>Argos Card</strong></div>
+                </div>
+                <section class="options">
+                    <div class="container"></div>
+                </section>
+            </div>
+        </div>
+        
     <footer></footer>
         
+    <!-- SET DIMENSIONS FOR OVERLAY ELEMENTS -->
+    <script>
+        var overlayHeight = $(window).height() - $("header.mainheader").height();
+        var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
+        $("div.filters-overlay").css("height",overlayHeight);
+        $("div.filters-inner").css("height",filtersInnerHeight);
+        $("div.pdp-overlay").css("height",overlayHeight);
+        $("div.pdp-inner").css("height",overlayHeight);
+        $("div.pdp-inner").css("width",$(window).width());
+        $("div.pdp-overlay").css("width",$(window).width());
+    </script>
+    
+    <!-- SHOW/HIDE FILTERS OVERLAY -->
     <script>
         $("div.filters-overlay").hide();
-        $("div.filters-overlay .accordion").css("top","100%");
+        $("div.filters-overlay").css("top",$(window).height());
         $("#hidefilters").click(function(){
             $("div.filters-overlay").hide();
-            $("div.filters-overlay .accordion").css("top","100%");
+            $("div.filters-overlay").css("top",$(window).height());
             $("body").css("overflow","scroll");
         });
         $("#showfilters").click(function(){
-            $("div.filters-overlay").show();
-            $("div.filters-overlay .accordion").css("top","0");
+            $("div.filters-overlay").show();            
+            $("div.filters-overlay").css("top",$("header.mainheader").height());
             $("body").css("overflow","hidden");
         });
     </script>
-
+        
+    <!-- SHOW/HIDE PDP OVERLAY -->
     <script>
-        var filtersHeight = $(window).height() - $("header.mainheader").height();
-        var filtersInnerHeight = filtersHeight - $("div.sticky").outerHeight();
-        $("div.filters-overlay").css("height",filtersHeight);
-        $("div.filters-inner").css("height",filtersInnerHeight);
+        $("div.pdp-overlay").hide();
+        $("div.pdp-inner").addClass("pdp-out");
+        $("div.pdp-overlay").css("top",$("header.mainheader").height());
+        $("#hidepdp").click(function(){
+            $("div.pdp-inner").removeClass("pdp-in");
+            $("div.pdp-inner").addClass("pdp-out");
+            $("body").css("overflow","scroll");
+            $("div.pdp-overlay").hide();
+        });
+        $("#showpdp").click(function(){
+            $("div.pdp-overlay").show();
+            $("div.pdp-inner").removeClass("pdp-out");
+            $("div.pdp-inner").addClass("pdp-in");
+            $("body").css("overflow","hidden");
+        });
     </script>
         
     <script type="text/javascript" src="slick/slick.min.js"></script>
