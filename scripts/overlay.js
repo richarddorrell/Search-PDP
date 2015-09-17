@@ -42,6 +42,7 @@ $("#showpdp").click(function () {
         $("body").css("overflow", "hidden");
         $("div.pdp-inner").load("pdp.html #pdpcontent");
         $.getScript("scripts/overlay.js");
+        $.getScript("scripts/craftyslide.js");
     }
           
 });
