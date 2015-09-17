@@ -342,7 +342,7 @@ label {
 }
 
 #pdpcontent {
-    margin-top: 60px;
+    
 }
 
 .flags span {
@@ -358,6 +358,11 @@ label {
 
 .flagonline {
     background-color: #f7941d;
+}
+
+#pdpcontent .flags {
+    position: absolute;
+    top: 60px;
 }
 
 .prodinfo > div { clear: both; }
@@ -379,8 +384,14 @@ section.options .container {
 }
 
 section.options h3 {
+    margin-bottom: 0;
     margin-top: 0;
     font-size: 1em;
+    height: 48px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: normal;
 }
 
 .prodinfo .credit {
@@ -411,6 +422,35 @@ section.options a.swatch.purple { background-color: #913493; }
 section.options a.swatch.blue { background-color: #3777bc; }
 section.options a.swatch.yellow { background-color: #ffe500; }
 
+section.options .colours {
+    height: 65px;
+    overflow: hidden;
+}
+
 section.options ul.availability {
     clear: both;
+}
+
+#pdpcontent .linkbar {
+    background: transparent url("../img/chevron.png") no-repeat 90% 50%;
+    height: 48px;
+}
+
+#pdpcontent .linkbar h3 {
+    margin: 0;
+    line-height: 48px;
+}
+
+
+#pdpcontent .linkbar h3 a {
+    width: 100%;
+    display: block;
+}
+
+#pdpcontent h3 {
+    font-size: 16px;
+}
+
+.moreinfo .container {
+    border-bottom: 1px solid #CCC;
 }

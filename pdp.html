@@ -10,16 +10,15 @@
         <meta http-equiv="Set-Cookie" content="LastBrowseCookie=http%3A%2F%2Fwww.dxax2wcsit00101.argos.co.uk%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FProductDisplay%3FcatalogId%3D24551%26version%3Dbeta%26langId%3D110%26partNumber%3D9806061%26storeId%3D10151; path=/">
         <link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.argos.co.uk/m/static/Product/partNumber/9806061.htm">
         <link rel="icon" href="http://www.argos.co.uk/wcsstore/argos/v2/public/img/favicon.ico" type="image/x-icon">
+        
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/craftyslide.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
-        <script type="text/javascript" src="scripts/accordion.js" defer></script>    
         <script type="text/javascript" src="scripts/overlay.js" defer></script>       
-        <script type="text/javascript" src="slick/slick.min.js" defer></script>
+        <script type="text/javascript" src="scripts/craftyslide.js"></script>       
 
         <title>Argos test template</title>
     </head>
@@ -36,30 +35,44 @@
         </header>
         
         <div id="pdpcontent">
+            
             <div class="container">
-                <a id="hidepdp">HIDE</a>
+                <a id="hidepdp">< Back</a>
             </div>
-            <div class="img-carousel twelve">
-                <div><img src="img/prod-img/prod1.jpg"/></div>
-                <!--<div><img src="img/prod-img/prod2.jpg"/></div>
-                <div><img src="img/prod-img/prod3.jpg"/></div>
-                <div><img src="img/prod-img/prod4.jpg"/></div>-->
+            
+            <div id="slideshow">
+                <ul>
+                    <li>
+                      <img src="img/prod-img/prod1.jpg" />
+                    </li>
+
+                    <li>
+                      <img src="img/prod-img/prod2.jpg" />
+                    </li>
+
+                    <li>           
+                      <img src="img/prod-img/prod3.jpg" />
+                    </li>	
+
+                    <li>           
+                      <img src="img/prod-img/prod4.jpg" />
+                    </li>	                         
+                </ul>
+            </div>  
+                
+            <div class="flags">
+                <span class="flagnew">NEW</span>
+                <span class="flagonline">ONLINE EXCLUSIVE</span>
             </div>
             <div class="container prodinfo">
-                <div>
-                    <div class="flags columns six">
-                        <span class="flagnew">NEW</span>
-                        <span class="flagonline">ONLINE EXCLUSIVE</span>
-                    </div>
-                    <div class="six columns reviews">
-                        <span></span> (0)
-                    </div>
-                </div>
                 <div>
                     <h1 class="prodtitle columns nine">ColourMatch leather effect tub sofa - Apple Green</h1>
                     <span class="catno columns three">257/6800</span>
                 </div>
                 <div class="twelve">
+                    <div class="reviews">
+                        <span></span> (0)
+                    </div>
                     <div class="mainprice columns six" style="text-align: right;">&pound;148.99</div>
                     <div class="columns six" style="line-height: 1em;">
                         <span class="wasprice">&pound;199.99</span><br/>
@@ -70,116 +83,170 @@
             </div>
             <section class="options">
                 <div class="container">
-                    <h3>Size: 2-Seater</h3>
-                    <div class="dropdown" style="width: 100%">
-                        <select>
-                            <option value="dropdown">2-Seater</option>
-                            <option value="option1">Price: Low to High</option>
-                            <option value="option2">Price: High to Low</option>
-                            <option value="option3">Promotions</option>
-                            <option value="option4">Customer Ratings</option>
-                        </select>
+                    <h3 class="columns three">Colour:</h3>
+                    <div class="columns nine colours">
+                        <a class="swatch green">Green</a>
+                        <a class="swatch red">Red</a>
+                        <a class="swatch purple">Purple</a>
+                        <a class="swatch blue">Blue</a>
+                        <a class="swatch yellow">Yellow</a>
                     </div>
                 </div>
                 <div class="container">
-                    <h3>Colour: Apple Green</h3>
-                    <a class="swatch green">Green</a>
-                    <a class="swatch red">Red</a>
-                    <a class="swatch purple">Purple</a>
-                    <a class="swatch blue">Blue</a>
-                    <a class="swatch yellow">Yellow</a>
+                    <h3 class="columns three">Number of seats:</h3>
+                    <div class="columns nine">
+                        <div class="dropdown" style="width: 100%;">
+                            <select style="width: 100%;">
+                                <option value="dropdown">2-Seater</option>
+                                <option value="option1">Price: Low to High</option>
+                                <option value="option2">Price: High to Low</option>
+                                <option value="option3">Promotions</option>
+                                <option value="option4">Customer Ratings</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="container">
-                    <h3>Quantity: 1</h3>
-                    <div class="dropdown" style="width: auto">
-                        <select style="width: 60px; background-position: 80% 50%;">
-                            <option value="dropdown">1</option>
-                            <option value="option1">2</option>
-                            <option value="option2">3</option>
-                            <option value="option3">4</option>
-                            <option value="option4">5</option>
-                            <option value="option5">5</option>
-                            <option value="option6">6</option>
-                            <option value="option7">7</option>
-                            <option value="option8">8</option>
-                            <option value="option9">9</option>
-                        </select>
+                    <div>
+                        <h3 class="columns three">Quantity:</h3>
+                        <div class="columns nine">
+                            <div class="dropdown" style="width: 100%">
+                                <select style="width: 100%;">
+                                    <option value="dropdown">1</option>
+                                    <option value="option1">2</option>
+                                    <option value="option2">3</option>
+                                    <option value="option3">4</option>
+                                    <option value="option4">5</option>
+                                    <option value="option5">5</option>
+                                    <option value="option6">6</option>
+                                    <option value="option7">7</option>
+                                    <option value="option8">8</option>
+                                    <option value="option9">9</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <a class="button primary columns ten" style="text-align: center;">Add to basket</a>
                         <a class="button wishlist columns two"><span></span></a>
                     </div>
+                </div>
+                <div class="container">
+                    <h3>How can I get it?</h3>
                     <ul class="availability">
                         <li class="sc">Available for store collection</li>
                         <li class="hd">Available for home delivery</li>
                     </ul>
                 </div>
             </section>
-            <div class="container twelve">
-                <h3>About the product:</h3>
-                <ul>
-                    <li>Durable hardwood frame to survive family life.</li>
-                    <li>Leather effect upholstery for that little touch of luxury.</li>
-                </ul>
-            </div>
-            <div class="container twelve prodcarousel">
-                <h3>Customers also considered:</h3>
-                <div class="otherprod six">
-                    <img src=""/>
-                    <h4>ColourMatch fabric tub chair - Apple green.</h4>
+            <div class="moreinfo">
+                <div class="container twelve linkbar">
+                    <h3><a>Delivery and returns</a></h3>
+                </div>
+                <div class="container twelve" style="border-bottom: 1px solid #CCC;">
+                    <h3>About the product</h3>
+                    <ul>
+                        <li>Durable hardwood frame to survive family life.</li>
+                        <li>Leather effect upholstery for that little touch of luxury.</li>
+                        <li>Removable cushions for hassle-free cleaning.</li>
+                        <li>All Colourmatch products work perfectly together for a coordinated look.</li>
+                        <li>Deep foam cushions for optimum comfort.</li>
+                    </ul>
+                </div>
+                <div class="container twelve linkbar">
+                    <h3><a>Specification</a></h3>
+                </div>
+                <div class="container twelve linkbar">
+                    <h3><a>Full Description</a></h3>
+                </div>
+                <div class="container twelve linkbar">
+                    <h3><a>Q&amp;A</a></h3>
+                </div>
+                <div class="container twelve">
+                    <h3>Customer reviews</h3>
                     <div class="reviews">
-                        <span></span> (0)
+                        <span></span> (0) <span>not yet reviewed</span>
                     </div>
-                    <div class="price">&pound;98.99</div>                    
                 </div>
-                <div class="otherprod six">
-                    <img src=""/>
-                    <h4>ColourMatch fabric ottoman - Apple green.</h4>
+                <div class="container twelve">
+                    <h3>Special offers</h3>
                     <div class="reviews">
-                        <span></span> (0)
+                        <span></span> (0) <span>not yet reviewed</span>
                     </div>
-                    <div class="price">&pound;72.99</div>                    
                 </div>
-            </div>
-            <div class="container twelve">
-                <h3>Customer reviews:</h3>
-                <div class="reviews">
-                    <span></span> (0) <span>not yet reviewed</span>
+                <div class="container twelve linkbar">
+                    <h3><a>Finance details</a></h3>
                 </div>
-            </div>
-            <div class="container twelve">
-                <h3>Q&amp;A:</h3>
-                <span>6 questions</span> | <span>6 answers</span>
-            </div>
-            <div class="container twelve prodcarousel">
-                <h3>Customers also bought:</h3>
-                <div class="otherprod six">
-                    <img src=""/>
-                    <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                    <div class="reviews">
-                        <span></span> (0)
+                <div class="container twelve prodcarousel">
+                    <h3>Customers who viewed this went on to buy</h3>
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;98.99</div>                    
                     </div>
-                    <div class="price">&pound;98.99</div>                    
-                </div>
-                <div class="otherprod six">
-                    <img src=""/>
-                    <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                    <div class="reviews">
-                        <span></span> (0)
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;72.99</div>                    
                     </div>
-                    <div class="price">&pound;72.99</div>                    
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;72.99</div>                    
+                    </div>
+                </div>
+                <div class="container twelve prodcarousel">
+                    <h3>Frequently bought together with this item</h3>
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;98.99</div>                    
+                    </div>
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;72.99</div>                    
+                    </div>
+                    <div class="otherprod six">
+                        <img src=""/>
+                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
+                        <div class="reviews">
+                            <span></span> (0)
+                        </div>
+                        <div class="price">&pound;72.99</div>                    
+                    </div>
                 </div>
             </div>
+            
+                
+            <script>
+                $("#slideshow").craftyslide({
+                  'width': $(window).width() - 30,
+                  'height': 250,
+                  'pagination': true,
+                  'fadetime': 500,
+                  'delay': 2500
+                });
+            </script>  
+                
         </div>
         
     <footer></footer>
-    
-    <script>
-        $(document).ready(function(){
-            $('.img-carousel').slick({
-            });
-        });
-    </script>
         
     </body>
 </html>
