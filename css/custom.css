@@ -362,7 +362,8 @@ label {
 
 #pdpcontent .flags {
     position: absolute;
-    top: 60px;
+    top: 65px;
+    left: 15px;
 }
 
 .prodinfo > div { clear: both; }
@@ -453,4 +454,8 @@ section.options ul.availability {
 
 .moreinfo .container {
     border-bottom: 1px solid #CCC;
+}
+
+#slideshow img {
+    height: 250px;
 }
