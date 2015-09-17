@@ -5,8 +5,6 @@ $("div.filters-overlay").css("height", overlayHeight);
 $("div.filters-inner").css("height", filtersInnerHeight);
 $("div.pdp-overlay").css("height", overlayHeight);
 $("div.pdp-inner").css("height", overlayHeight);
-$("div.pdp-inner").css("width", $(window).width());
-$("div.pdp-overlay").css("width", $(window).width());
 
 
 $("div.filters-overlay").hide();
@@ -25,21 +23,25 @@ $("#showfilters").click(function () {
 });
 
 /* SHOW PDP */
-$("div.pdp-overlay").hide();
-$("div.pdp-inner").addClass("pdp-out");
 $("div.pdp-overlay").css("top", $("header.mainheader").height());
 
 $("#hidepdp").click(function () {
-    $("div.pdp-inner").removeClass("pdp-in");
-    $("div.pdp-inner").addClass("pdp-out");
-    $("body").css("overflow", "scroll");
-    $("div.pdp-overlay").hide();
+    if ($("div.pdp-inner").hasClass("pdp-in")) {
+        $("div.pdp-inner").removeClass("pdp-in");
+        $("div.pdp-inner").addClass("pdp-out");
+        $("body").css("overflow", "scroll");
+        $("div.pdp-overlay").hide();
+    }
 });
 
 $("#showpdp").click(function () {
     $("div.pdp-overlay").show();
-    $("div.pdp-inner").removeClass("pdp-out");
-    $("div.pdp-inner").addClass("pdp-in");
-    $("body").css("overflow", "hidden");
-    $("div.pdp-inner").load("pdp.html");
+    if ($("div.pdp-inner").hasClass("pdp-out")) {
+        $("div.pdp-inner").removeClass("pdp-out");
+        $("div.pdp-inner").addClass("pdp-in");
+        $("body").css("overflow", "hidden");
+        $("div.pdp-inner").load("pdp.html #pdpcontent");
+        $.getScript("scripts/overlay.js");
+    }
+          
 });

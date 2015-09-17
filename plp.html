@@ -18,7 +18,7 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
         <script type="text/javascript" src="scripts/accordion.js" defer></script>    
-        <script type="text/javascript" src="scripts/overlay.js" defer></script>       
+        <script type="text/javascript" src="scripts/overlay.js" defer></script>           
         <script type="text/javascript" src="slick/slick.min.js" defer></script>
 
         <title>Argos test template</title>
@@ -391,7 +391,7 @@
         </div>
         
         <div class="pdp-overlay">
-            <div class="pdp-inner">
+            <div class="pdp-inner pdp-out">
                 <!-- PDP INJECTS HERE -->
             </div>
         </div>
@@ -406,15 +406,12 @@
     </script>
         
         
-        
-        <script>
-            $( "a#showpdp" ).click(function( event ) {
-              event.preventDefault();
-              $( "<div>" )
-                .append( "default " + event.type + " prevented" )
-                .appendTo( "#log" );
-            });
-        </script>
+
+    <script>
+        $( "a#showpdp" ).click(function( event ) {
+          event.preventDefault();
+        });
+    </script>
         
     </body>
 </html>
