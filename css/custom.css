@@ -312,10 +312,12 @@ label {
 
 .pdp-inner {
     overflow-y: scroll;
+    overflow-x: hidden;
     position: fixed;
     background-color: #FFF;
      transform: translateX(100%);
     -webkit-transform: translateX(100%);  
+    width: 100%;
 }
 
 .pdp-in {
@@ -392,7 +394,6 @@ section.options h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: normal;
 }
 
 .prodinfo .credit {
@@ -430,6 +431,26 @@ section.options .colours {
 
 section.options ul.availability {
     clear: both;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+section.options ul.availability li {
+    height: 35px;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+section.options ul.availability li.sc {
+    background: transparent url("../img/sc.png") no-repeat 0 50%;
+}
+
+section.options ul.availability li.hd {
+    background: transparent url("../img/hd.png") no-repeat 0 50%;
 }
 
 #pdpcontent .linkbar {
@@ -458,4 +479,59 @@ section.options ul.availability {
 
 #slideshow img {
     height: 250px;
+}
+
+.reviews span {
+    text-transform: uppercase;
+    color: #BBB;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.reviews .rating {
+    width: 50%;
+    float: left;
+}
+
+.reviews .rating .bar {
+    display: block;
+    float: left;
+    width: 74px;
+    height: 15px;
+    background: transparent url("../img/rating.png") no-repeat 0 50%;
+    text-indent: 80px;
+}
+
+.reviews span.stars {
+    display: block;
+    width: 120px;
+    height: 20px;
+    background: transparent url("../img/stars.png") no-repeat;
+    background-size: contain;
+    text-indent: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.reviews .bubble {
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FAFAFA;
+    margin-bottom: 15px;
+}
+
+.specialoffers {
+    margin: 0 -50%;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.specialoffers div {
+    float: left;
+    margin: 0 7px 15px;
+    background-color: #EE3124;
+    padding: 15px;
+    color: #FFF;
 }

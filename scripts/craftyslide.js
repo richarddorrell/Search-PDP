@@ -9,11 +9,12 @@
 
 (function ($) {
     $.fn.craftyslide = function (options) {
-
-        // Defaults
+        
+        
+              // Defaults
         var defaults = {
-            "width": 600,
-            "height": 300,
+            "width": $(window).width() - 30,
+            "height": 250,
             "pagination": true,
             "fadetime": 350,
             "delay": 5000

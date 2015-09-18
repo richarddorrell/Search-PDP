@@ -24,6 +24,7 @@ $("#showfilters").click(function () {
 
 /* SHOW PDP */
 $("div.pdp-overlay").css("top", $("header.mainheader").height());
+$("div.pdp-overlay").css("width", $(window).width());
 
 $("#hidepdp").click(function () {
     if ($("div.pdp-inner").hasClass("pdp-in")) {
