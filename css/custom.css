@@ -157,18 +157,36 @@ input[type=text]:focus {
 .filters-overlay {
     width: 100%;
     position: absolute;
-    background-color: #FFF;
     z-index: 50;
-    -webkit-animation-duration: 0.2s;
-    -webkit-animation-name: filterslide;  
+    display: none;
 }
 
-@-webkit-keyframes filterslide {
-    100% { top: 60px; }
+.filters-inner {
+    overflow-y: scroll;
+    width: 100%;
+    position: fixed;
+     transform: translateY(100%);
+    -webkit-transform: translateY(100%);  
+}
+    
+
+.filters-in {
+    animation: filters-in 0.3s forwards;
+    -webkit-animation: filters-in 0.3s forwards;
 }
 
-@keyframes filterslide {
-    100% { top: 60px; }
+.filters-out {
+    animation: filters-out 0.3s forwards;
+    -webkit-animation: filters-out 0.3s forwards;
+}
+
+@-webkit-keyframes filters-in {
+    100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes filters-out {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(100%); }
 }
 
 .filters-overlay .sticky {
@@ -188,13 +206,6 @@ input[type=text]:focus {
     height: 40px;
     line-height: 40px;
 }
-
-.filters-inner {
-    overflow-y: scroll;
-    width: 100%;
-    position: fixed;
-}
-
 .accordion, .accordion * {
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
@@ -321,13 +332,13 @@ label {
 }
 
 .pdp-in {
-    animation: pdp-in 0.5s forwards;
-    -webkit-animation: pdp-in 0.5s forwards;
+    animation: pdp-in 0.3s forwards;
+    -webkit-animation: pdp-in 0.3s forwards;
 }
 
 .pdp-out {
-    animation: pdp-out 0.5s forwards;
-    -webkit-animation: pdp-out 0.5s forwards;
+    animation: pdp-out 0.3s forwards;
+    -webkit-animation: pdp-out 0.3s forwards;
 }
 
 @-webkit-keyframes pdp-in {
@@ -337,10 +348,6 @@ label {
 @-webkit-keyframes pdp-out {
     0% { transform: translateX(0%); }
     100% { transform: translateX(100%); }
-}
-
-@keyframes pdpslide {
-    100% { left: 0px; }
 }
 
 #pdpcontent {

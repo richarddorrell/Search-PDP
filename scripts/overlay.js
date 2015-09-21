@@ -6,20 +6,24 @@ $("div.filters-inner").css("height", filtersInnerHeight);
 $("div.pdp-overlay").css("height", overlayHeight);
 $("div.pdp-inner").css("height", overlayHeight);
 
-
-$("div.filters-overlay").hide();
-$("div.filters-overlay").css("top", $(window).height());
+$("div.filters-overlay").css("top", $("header.mainheader").height());
 
 $("#hidefilters").click(function () {
-    $("div.filters-overlay").hide();
-    $("div.filters-overlay").css("top", $(window).height());
-    $("body").css("overflow", "scroll");
+    if ($("div.filters-inner").hasClass("filters-in")) {
+        $("div.filters-inner").removeClass("filters-in");
+        $("div.filters-inner").addClass("filters-out"); 
+        $("body").css("overflow", "scroll");
+        $("div.filters-overlay").delay(300).hide(0);
+    }
 });
 
 $("#showfilters").click(function () {
     $("div.filters-overlay").show();
-    $("div.filters-overlay").css("top", $("header.mainheader").height());
-    $("body").css("overflow", "hidden");
+    if ($("div.filters-inner").hasClass("filters-out")) {
+        $("div.filters-inner").removeClass("filters-out");
+        $("div.filters-inner").addClass("filters-in");
+        $("body").css("overflow", "hidden");
+    }
 });
 
 /* SHOW PDP */
@@ -31,7 +35,7 @@ $("#hidepdp").click(function () {
         $("div.pdp-inner").removeClass("pdp-in");
         $("div.pdp-inner").addClass("pdp-out");
         $("body").css("overflow", "scroll");
-        $("div.pdp-overlay").hide();
+        $("div.pdp-overlay").delay(300).hide(0);
     }
 });
 
