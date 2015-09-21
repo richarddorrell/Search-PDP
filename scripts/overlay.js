@@ -57,7 +57,8 @@ $("#showpdp").click(function () {
         $("div.pdp-inner").load("pdp.html #pdpcontent", function () {
             $.getScript('scripts/overlay.js', function() {
                $.getScript('scripts/craftyslide.js', function() {
-                   $("#craftyscript").replaceWith('<script type="text/javascript"> $("#slideshow").craftyslide({ "width": $(window).width() - 30, "height": 250, "pagination": true, "fadetime": 500, "delay": 2500 }); </script>');
+                   var imgsize = $(window).width() - 30;
+                   $("#craftyscript").replaceWith('<script type="text/javascript"> $("#slideshow").craftyslide({ "width": $(window).width() - 30, "height": $(window).width() - 30, "pagination": true, "fadetime": 500, "delay": 2500 }); </script>');
                });
             });
         }); 
