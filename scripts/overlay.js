@@ -6,7 +6,7 @@ $("div.filters-inner").css("height", filtersInnerHeight);
 $("div.pdp-overlay").css("height", overlayHeight);
 $("div.pdp-inner").css("height", overlayHeight);
 
-$( window ).resize(function() {
+$(window).resize(function () {
     var overlayHeight = $(window).height() - $("header.mainheader").height();
     var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
     $("div.filters-overlay").css("height", overlayHeight);
@@ -20,7 +20,7 @@ $("div.filters-overlay").css("top", $("header.mainheader").height());
 $("#hidefilters").click(function () {
     if ($("div.filters-inner").hasClass("filters-in")) {
         $("div.filters-inner").removeClass("filters-in");
-        $("div.filters-inner").addClass("filters-out"); 
+        $("div.filters-inner").addClass("filters-out");
         $("body").css("overflow", "scroll");
         $("div.filters-overlay").delay(300).hide(0);
     }
@@ -54,9 +54,13 @@ $("#showpdp").click(function () {
         $("div.pdp-inner").removeClass("pdp-out");
         $("div.pdp-inner").addClass("pdp-in");
         $("body").css("overflow", "hidden");
-        $("div.pdp-inner").load("pdp.html #pdpcontent");
-        $.getScript("scripts/overlay.js");
-        $.getScript("scripts/craftyslide.js");
+        $("div.pdp-inner").load("pdp.html #pdpcontent", function () {
+            $.getScript('scripts/overlay.js', function() {
+               $.getScript('scripts/craftyslide.js', function() {
+                   $("#craftyscript").replaceWith('<script type="text/javascript"> $("#slideshow").craftyslide({ "width": $(window).width() - 30, "height": 250, "pagination": true, "fadetime": 500, "delay": 2500 }); </script>');
+               });
+            });
+        }); 
     }
           
 });
