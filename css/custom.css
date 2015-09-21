@@ -165,6 +165,7 @@ input[type=text]:focus {
     overflow-y: scroll;
     width: 100%;
     position: fixed;
+    background-color: #FFF;
      transform: translateY(100%);
     -webkit-transform: translateY(100%);  
 }

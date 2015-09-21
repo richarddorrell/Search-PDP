@@ -6,6 +6,15 @@ $("div.filters-inner").css("height", filtersInnerHeight);
 $("div.pdp-overlay").css("height", overlayHeight);
 $("div.pdp-inner").css("height", overlayHeight);
 
+$( window ).resize(function() {
+    var overlayHeight = $(window).height() - $("header.mainheader").height();
+    var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
+    $("div.filters-overlay").css("height", overlayHeight);
+    $("div.filters-inner").css("height", filtersInnerHeight);
+    $("div.pdp-overlay").css("height", overlayHeight);
+    $("div.pdp-inner").css("height", overlayHeight);
+});
+
 $("div.filters-overlay").css("top", $("header.mainheader").height());
 
 $("#hidefilters").click(function () {
