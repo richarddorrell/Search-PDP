@@ -58,7 +58,7 @@ $("#showpdp").click(function () {
             $.getScript('scripts/overlay.js', function() {
                 $.getScript('scripts/swiper.jquery.js', function() {
                    var imgsize = $(window).width() - 80;
-                   $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize +'px; height: ' + imgsize +'px; } </style> <script> var swiper = new Swiper(".swiper-container", { pagination: ".swiper-pagination", paginationClickable: true }); </script>');
+                   $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize +'px; height: ' + (imgsize + 50) +'px; } </style> <script> var swiper = new Swiper(".swiper-container", { pagination: ".swiper-pagination", paginationClickable: true }); </script>');
                });
             });
         }); 
