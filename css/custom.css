@@ -304,18 +304,6 @@ label {
   -ms-user-select: none;
   user-select: none; }
 
-.img-carousel {
-    height: 300px;
-    width: 100%;
-    clear: both;
-}
-.img-carousel img {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    
-}
-
 .pdp-overlay {
     position: absolute;
     z-index: 50;  
@@ -374,7 +362,10 @@ label {
     position: absolute;
     top: 65px;
     left: 15px;
+    z-index: 100;
 }
+
+.prodinfo { z-index: 10; }
 
 .prodinfo > div { clear: both; }
 

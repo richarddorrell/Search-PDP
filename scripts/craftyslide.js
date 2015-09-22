@@ -15,7 +15,7 @@
         var defaults = {
             "width": $(window).width() - 30,
             "height": 250,
-            "pagination": true,
+            "pagination": false,
             "fadetime": 350,
             "delay": 5000
         };

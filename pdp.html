@@ -13,12 +13,11 @@
         
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/craftyslide.css">
+        <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
-        <script type="text/javascript" src="scripts/overlay.js" defer></script>       
-        <script type="text/javascript" src="scripts/craftyslide.js"></script>       
+        <script type="text/javascript" src="scripts/overlay.js" defer></script>              
 
         <title>Argos test template</title>
     </head>
@@ -40,26 +39,20 @@
                 <a id="hidepdp" style="margin: 15px 0; display: block;">Back</a>
             </div>
             
-            <div id="slideshow">
-                <ul>
-                    <li>
-                      <img src="img/prod-img/prod1.jpg" />
-                    </li>
-
-                    <li>
-                      <img src="img/prod-img/prod2.jpg" />
-                    </li>
-
-                    <li>           
-                      <img src="img/prod-img/prod3.jpg" />
-                    </li>	
-
-                    <li>           
-                      <img src="img/prod-img/prod4.jpg" />
-                    </li>	                         
-                </ul>
-            </div>  
-            <div id="craftyscript"></div>
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/prod-img/prod1.jpg"/></div>
+                    <div class="swiper-slide"><img src="img/prod-img/prod2.jpg"/></div>
+                    <div class="swiper-slide"><img src="img/prod-img/prod3.jpg"/></div>
+                    <div class="swiper-slide"><img src="img/prod-img/prod4.jpg"/></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div id="swiperscript"></div>
                 
             <div class="flags">
                 <span class="flagnew">NEW</span>
@@ -257,15 +250,8 @@
                 </div>
             </div>     
             
-            <script type="text/javascript">
-                $("#slideshow").craftyslide({
-                  'width': $(window).width() - 30,
-                  'height': 250,
-                  'pagination': true,
-                  'fadetime': 500,
-                  'delay': 2500
-                });
-            </script>  
+            <script type="text/javascript" src="scripts/swiper.jquery.js"></script>
+            
         </div>
         
     <footer></footer>
