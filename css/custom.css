@@ -534,27 +534,23 @@ section.options ul.availability li.hd {
     color: #FFF;
 }
 
-.prodcarousel {
-    overflow-x: hidden;
-}
-
-.prodcarousel .prod-inner {
-    margin: 0 -50%;
-    overflow-x: hidden;
+.products-container {
+    margin-bottom: 15px !important;
 }
 
 .otherprod img {
-    width: 100px;
-    height: 100px;
+    width: 50% !important;
+    height: auto;
 }
 
 .otherprod h4 {
     clear: both;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
 }
 
 .otherprod {
     float: left;
-    margin: 0 7px 15px;
-    padding: 15px;
-    width: 130px;
+    width: 100%;
 }

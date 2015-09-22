@@ -58,7 +58,9 @@ $("#showpdp").click(function () {
             $.getScript('scripts/overlay.js', function() {
                 $.getScript('scripts/swiper.jquery.js', function() {
                    var imgsize = $(window).width() - 80;
+                    var prodsize = $(window).width() / 2;
                    $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize +'px; height: ' + (imgsize + 50) +'px; } </style> <script> var swiper = new Swiper(".swiper-container", { pagination: ".swiper-pagination", paginationClickable: true }); </script>');
+                    $("#contentsliders").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize +'px !important; height: auto;  .products-slide { width: ' + prodsize +'px !important; height: auto; } </style> <script> var swiper = new Swiper(".swiper-container", { pagination: ".swiper-pagination", paginationClickable: true }); </script>');
                });
             });
         }); 
