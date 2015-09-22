@@ -17,7 +17,6 @@
   position: relative;
   /* Fix of Webkit flickering */
   z-index: 1;
-    overflow-y: hidden;
 }
 .swiper-container-no-flexbox .swiper-slide {
   float: left;
