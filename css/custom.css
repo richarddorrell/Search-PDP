@@ -29,6 +29,12 @@
 
 .fulfilment-tab { width: 45.5% }
 
+.main-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
 .view p { 
     display: block;
     width: 22px;
@@ -58,7 +64,9 @@
   padding: 0 10px; 
   font-size: 15px; 
   line-height: 48px;
-  box-sizing: border-box;  }
+  box-sizing: border-box; 
+    text-align: center;
+}
 
 .primary { 
   height: 48px; 
@@ -83,6 +91,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    float: right;
+    margin-left: 15px;
 }
 
 .wishlist span {
@@ -91,6 +101,11 @@
     width: 100%;
     height: 20px;
     display: block;
+}
+
+.touch {
+    min-width: 48px;
+    min-height: 48px;
 }
 
 .button:active { 
@@ -135,7 +150,7 @@ input[type=text]:focus {
 .dropdown option {
   padding: 10px; }
 
-.results { margin-top: 60px; font-family: argosbook; }
+.results { font-family: argosbook; }
 .results span { margin: 15px 0; float: left; font-weight: bold; }
 .results span + span { float: right; font-weight: normal; }
 
@@ -182,12 +197,13 @@ input[type=text]:focus {
 }
 
 @-webkit-keyframes filters-in {
-    100% { transform: translateY(0%); }
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0%); opacity: 1; }
 }
 
 @-webkit-keyframes filters-out {
-    0% { transform: translateY(0%); }
-    100% { transform: translateY(100%); }
+    0% { transform: translateY(0%); opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
 }
 
 .filters-overlay .sticky {
@@ -310,6 +326,16 @@ label {
     display: none;
 }
 
+.prodinfo .reviews, .products-slide .reviews {
+    background: transparent url("../img/stars.png") no-repeat;
+    display: block;
+    background-size: contain;
+    height: 20px;
+    width: 150px;
+    margin: 0 auto 10px;
+    text-align: right;
+}
+
 .pdp-inner {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -331,12 +357,13 @@ label {
 }
 
 @-webkit-keyframes pdp-in {
-    100% { transform: translateX(0%); }
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0%); opacity: 1; }
 }
 
 @-webkit-keyframes pdp-out {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(100%); }
+    0% { transform: translateX(0%); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
 }
 
 #pdpcontent {
@@ -368,10 +395,6 @@ label {
 .prodinfo { z-index: 10; }
 
 .prodinfo > div { clear: both; }
-
-.prodinfo .reviews {
-    text-align: right;
-}
 
 section.options {
     clear: both;
@@ -406,15 +429,28 @@ section.options h3 {
 
 section.options .dropdown, section.options .button { margin-bottom: 15px; }
 
-section.options a.swatch {
+section.options a.swatch, section.options .expand, section.options .collapse {
     width: 48px;
     height: 48px;
-    margin: 0 15px 15px 0;
-    border: 1px solid #CCC;
+    margin: 0 7px 15px 0;
     text-indent: -9999px;
     overflow: hidden;
     display: block;
     float: left;
+}
+
+section.options .expand, section.options .collapse {
+    float: right;
+    background: #FFF url("../img/chevron-down.png") no-repeat 50% 50%;
+    margin-right: 0;
+    height: 46px;
+    width: 46px;
+    border: 1px solid #CCC;
+}
+
+section.options .collapse {
+    float: left;
+    background: #FFF url("../img/chevron-up.png") no-repeat 50% 50%;
 }
 
 section.options a.swatch.green { background-color: #00aa50; }
@@ -424,8 +460,9 @@ section.options a.swatch.blue { background-color: #3777bc; }
 section.options a.swatch.yellow { background-color: #ffe500; }
 
 section.options .colours {
-    height: 65px;
+    height: 63px;
     overflow: hidden;
+    transition: all .2s ease-in;
 }
 
 section.options ul.availability {
@@ -474,6 +511,7 @@ section.options ul.availability li.hd {
 
 .moreinfo .container {
     border-bottom: 1px solid #CCC;
+    display: table;    
 }
 
 #slideshow img {
@@ -520,14 +558,11 @@ section.options ul.availability li.hd {
     margin-bottom: 15px;
 }
 
-.specialoffers {
-    margin: 0 -50%;
-    overflow-x: hidden;
-    display: flex;
+.specialoffers-container, .specialoffers-wrapper {
+    height: auto !important;
 }
 
-.specialoffers div {
-    float: left;
+.specialoffers-slide div {
     margin: 0 7px 15px;
     background-color: #EE3124;
     padding: 15px;
@@ -539,18 +574,26 @@ section.options ul.availability li.hd {
 }
 
 .otherprod img {
-    width: 50% !important;
     height: auto;
 }
 
 .otherprod h4 {
     clear: both;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     text-align: center;
-    width: 80%;
+    width: 90%;
 }
 
 .otherprod {
     float: left;
     width: 100%;
+}
+
+.options .primary {
+    flex-grow: 1;    
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .pdp-right { float: right; width: 320px; border-left: 1px solid #CCC; overflow: hidden; }
+    .pdp-left { float: left; overflow: hidden; position: fixed; }
 }

@@ -151,7 +151,7 @@
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
 }
 /* Pagination Styles */
-.swiper-pagination {
+.swiper-pagination, .specialoffers-pagination, .prod-one-pagination, .prod-two-pagination {
   position: absolute;
   text-align: center;
   -webkit-transition: 300ms;
@@ -173,6 +173,7 @@
   display: inline-block;
 	background-color: #FFF;
     border: 1px solid #CCC;
+    border-radius: 100%;
 }
 button.swiper-pagination-bullet {
   border: none;
