@@ -593,7 +593,50 @@ section.options ul.availability li.hd {
     flex-grow: 1;    
 }
 
+.dock {
+    background-color: #F5F5F5;
+    padding: 15px 0;
+    position: fixed;
+    border-bottom: 1px solid #CCC;
+    z-index: 100;
+    width: 100%;
+}
+
+.pdpnav {
+    background-color: #F5F5F5;
+    padding: 15px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.pdpnav .left {
+    float: left;
+    width: 10px;
+    height: 16px;
+    display: block;
+    background: transparent url("../img/chevron-left.png") no-repeat;
+    background-size: contain;
+}
+
+.pdpnav .searchterm {
+    text-align: center;
+    width: 100%;
+}
+
+.pdpnav .right {
+    float: right;
+    width: 10px;
+    height: 16px;
+    display: block;
+    background: transparent url("../img/chevron.png") no-repeat;
+    background-size: contain;
+}
+
+.pdp-left {
+    position: relative;
+}
+
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .pdp-right { float: right; width: 320px; border-left: 1px solid #CCC; overflow: hidden; }
-    .pdp-left { float: left; overflow: hidden; position: fixed; }
+    .pdp-right { float: right; width: 320px; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
+    .pdp-left { float: left; overflow: hidden;  }
+    .dock { width: auto; }
 }
