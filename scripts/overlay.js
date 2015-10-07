@@ -1,16 +1,26 @@
+<<<<<<< HEAD
 $(document).ready(function () {
+=======
+$(document).ready(function() {
+>>>>>>> origin/gh-pages
     var overlayHeight = $(window).height() - $("header.mainheader").height();
     var topoffset = $(".pdpnav").outerHeight();
     var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
     var windowwidth = $(window).width();
+<<<<<<< HEAD
     var imgsize = $(window).width() - 80;
     var imgsizetab = imgsize - $(".pdp-right").width();
+=======
+    var imgsizetab = imgsize - $(".pdp-right").width();
+    var imgsize = $(window).width() - 80;
+>>>>>>> origin/gh-pages
     var prodsize = $(".pdp-right").width() - 80;
     var tableft = $(window).width() - $(".pdp-right").width() - 2;
     $("div.filters-overlay").css("height", overlayHeight);
     $("div.filters-inner").css("height", filtersInnerHeight);
     $("div.pdp-overlay").css("height", overlayHeight);
     $("div.pdp-inner").css("height", overlayHeight);
+<<<<<<< HEAD
     $("div#pdpcontent").css("height", overlayHeight);
     $("div.main-container").css("height", overlayHeight);
     $("div.main-container").css("top", $("header.mainheader").height());
@@ -63,6 +73,41 @@ $(document).ready(function () {
 			height: 48
 		}
 	});
+=======
+    $("div.main-container").css("height", overlayHeight);
+    $("div.main-container").css("top", $("header.mainheader").height());
+    $(".products-slide").css("width", prodsize);  
+    $(".dock").hide();
+    $(".dock").css("top",topoffset);
+    if (windowwidth >= 768) {
+        if (windowwidth <= 1024) {
+            $(".pdp-left .swiper-container").css("width", imgsizetab);
+            $(".pdp-left").css("width",tableft);
+            $(".pdp-right").css("height", overlayHeight);
+            $(".pdp-right .swiper-container").css("width", prodsize);
+            $(".pdp-right").scroll(function() {
+                var y = $(this).scrollTop();
+                if (y > 300) {
+                    $('.dock').slideDown();
+                } else {
+                    $('.dock').slideUp();
+                }
+            }); 
+        }
+    }
+    else {
+        $(".pdp-left").css("width", windowwidth);
+        $(".pdp-right .swiper-container").css("width", prodsize);
+        $(".pdp-inner").scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 10) {
+                $('.dock').slideDown();
+            } else {
+                $('.dock').slideUp();
+            }
+        }); 
+    }
+>>>>>>> origin/gh-pages
 
     /* RESIZE */
     $(window).resize(function () {
@@ -79,6 +124,7 @@ $(document).ready(function () {
         $("div.pdp-overlay").css("height", overlayHeight);
         $("div.pdp-overlay").css("width", $(window).width());
         $("div.pdp-inner").css("height", overlayHeight);
+<<<<<<< HEAD
         $("div#pdpcontent").css("height", overlayHeight);
         $(".swiper-container").css("width", imgsize);
         $(".products-slide").css("width", prodsize);
@@ -111,6 +157,36 @@ $(document).ready(function () {
                     $('.backtotop').slideDown();
                 }
             });
+=======
+        $(".swiper-container").css("width", imgsize);
+        $(".products-slide").css("width", prodsize);  
+        if (windowwidth >= 768) {
+            if (windowwidth <= 1024) {
+                $(".pdp-left .swiper-container").css("width", imgsizetab);
+                $(".pdp-left").css("width",tableft);
+                $(".pdp-right .swiper-container").css("width", prodsize);
+                $(".pdp-right").css("height", overlayHeight);
+                $(".pdp-right").scroll(function() {
+                    var y = $(this).scrollTop();
+                    if (y > 300) {
+                        $('.dock').slideDown();
+                    } else {
+                        $('.dock').slideUp();
+                    }
+                }); 
+            }
+        }
+        else {
+            $(".pdp-left").css("width", windowwidth);
+            $(".pdp-inner").scroll(function() {
+                var y = $(this).scrollTop();
+                if (y > 10) {
+                    $('.dock').slideDown();
+                } else {
+                    $('.dock').slideUp();
+                }
+            }); 
+>>>>>>> origin/gh-pages
         }
     });
 
@@ -124,10 +200,13 @@ $(document).ready(function () {
             $("body").css("overflow", "auto");
             $("div.filters-overlay").delay(300).hide(0);
         }
+<<<<<<< HEAD
 		if ($("div.sticky").hasClass("filters-in")) {
             $("div.sticky").removeClass("filters-in");
             $("div.sticky").addClass("filters-out");
         }
+=======
+>>>>>>> origin/gh-pages
     });
 
     $("#showfilters").click(function () {
@@ -137,14 +216,18 @@ $(document).ready(function () {
             $("div.filters-inner").addClass("filters-in");
             $("body").css("overflow", "hidden");
         }
+<<<<<<< HEAD
         if ($("div.sticky").hasClass("filters-out")) {
             $("div.sticky").removeClass("filters-out");
             $("div.sticky").addClass("filters-in");
         }
+=======
+>>>>>>> origin/gh-pages
     });
 
     /* COLOURS */
     $("#showcolours").click(function () {
+<<<<<<< HEAD
         $("div.colours").css("height", "auto");
         $("#showcolours").css("display", "none");
         $("#hidecolours").css("display", "block");
@@ -154,6 +237,17 @@ $(document).ready(function () {
         $("div.colours").css("height", "63px");
         $("#hidecolours").css("display", "none");
         $("#showcolours").css("display", "block");
+=======
+        $("div.colours").css("height","auto");
+        $("#showcolours").css("display","none");
+        $("#hidecolours").css("display","block");
+    });
+
+    $("#hidecolours").click(function () {
+        $("div.colours").css("height","63px");
+        $("#hidecolours").css("display","none");
+        $("#showcolours").css("display","block");
+>>>>>>> origin/gh-pages
     });
 
     /* PDP */
@@ -177,6 +271,7 @@ $(document).ready(function () {
             $(".pdp-overlay").css("top", topoffset);
             $("body").css("overflow", "hidden");
             $("div.pdp-inner").load("pdp.html #pdpcontent", function () {
+<<<<<<< HEAD
                 $.getScript('scripts/overlay.js', function () {
                     $.getScript('scripts/swiper.jquery.js', function () {
                         var imgsize = $(".pdp-left").width() - 80;
@@ -198,4 +293,18 @@ $(document).ready(function () {
         }
 	});
     
+=======
+                $.getScript('scripts/overlay.js', function() {
+                    $.getScript('scripts/swiper.jquery.js', function() {
+                        var imgsize = $(".pdp-left").width() - 80;
+                        var prodsize = $(".pdp-right").width() - 80;
+                        $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize +'px; height: auto; } </style> <script> var swiper = new Swiper(".swiper-container"); </script>');
+                        $("#contentsliders").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize +'px !important; height: auto;  .products-slide { width: ' + prodsize +'px !important; height: auto; } </style> <script> var swiper = new Swiper(".prod-one"); var swiper = new Swiper(".prod-two"); </script>');
+                   });
+                });
+            });
+        }
+
+    });
+>>>>>>> origin/gh-pages
 });
