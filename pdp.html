@@ -10,383 +10,57 @@
         <meta http-equiv="Set-Cookie" content="LastBrowseCookie=http%3A%2F%2Fwww.dxax2wcsit00101.argos.co.uk%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FProductDisplay%3FcatalogId%3D24551%26version%3Dbeta%26langId%3D110%26partNumber%3D9806061%26storeId%3D10151; path=/">
         <link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.argos.co.uk/m/static/Product/partNumber/9806061.htm">
         <link rel="icon" href="http://www.argos.co.uk/wcsstore/argos/v2/public/img/favicon.ico" type="image/x-icon">
-        
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/swiper.css">
-<<<<<<< HEAD
-        <link rel="stylesheet" href="css/slideme.css">
-=======
->>>>>>> origin/gh-pages
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
-        <script type="text/javascript" src="scripts/overlay.js" defer></script>              
+        <script type="text/javascript" src="scripts/accordion.js" defer></script>    
+        <script type="text/javascript" src="scripts/overlay.js" defer></script>       
+        <script type="text/javascript" src="slick/slick.min.js" defer></script>
 
         <title>Argos test template</title>
     </head>
 	
 	<body>
         
-        <header class="mainheader">
-            <ul class="headerbar">
-              <li class="header_item logo"><a></a></li>
-              <li class="header_item stores"><a>Stores</a></li>
-              <li class="header_item search"><a>Search</a></li>
-              <li class="header_item trolley"><a>Trolley</a></li>
-            </ul>
-        </header>
-        
-        <div id="pdpcontent">
-            
-            <div class="pdpnav">
-                <div class="container" style="display: flex; align-items: center;">
-                    <a class="left"></a>
-                    <span class="searchterm">Search: <span>"Leather Sofa"&nbsp;&nbsp;&nbsp;&nbsp;1/207 Results</span></span>
-                    <a class="right"></a>
-                </div>
-            </div>
-            
-            <div class="pdp-left">            
-                <div class="container">
-                    <a id="hidepdp" style="margin: 15px 0; display: block;">Back</a>
-                </div>
-                <!-- Slider main container -->
-                <div class="swiper-container">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide"><img src="img/prod-img/prod1.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod2.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod3.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod4.jpg"/></div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination">X / 5</div>
-                </div>
-                <div id="swiperscript"></div>
-
-                <div class="flags">
-                    <span class="flagnew">NEW</span>
-                    <span class="flagonline">ONLINE EXCLUSIVE</span>
-                </div>
-            </div>
-            
-            <div class="pdp-right">
-                <div class="container prodinfo">
-                    <div>
-                        <h1 class="prodtitle columns nine">ColourMatch leather effect tub sofa - Apple Green</h1>
-                        <span class="catno columns three">257/6800</span>
-                    </div>
-                    <div class="twelve">
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <div class="mainprice columns six" style="text-align: right;">&pound;148.99</div>
-                        <div class="columns six" style="line-height: 1em;">
-                            <span class="wasprice">was &pound;199.99</span><br/>
-                            <span class="savingprice">SAVE &pound;51.00</span>
-                        </div>
-                    </div>
-                    <div class="credit twelve">Buy now, pay 6 months later with the <strong>Argos Card</strong></div>
-                </div>
-
-
-                <section class="options">
-                    <div class="container">
-                        <h3 class="columns three">Colour:</h3>
-                        <div class="columns nine colours">
-                            <a class="expand" id="showcolours">&nbsp;</a>
-                            <a class="swatch green">Green</a>
-                            <a class="swatch red">Red</a>
-                            <a class="swatch purple">Purple</a>
-                            <a class="swatch blue">Blue</a>
-                            <a class="swatch yellow">Yellow</a>
-                            <a class="collapse" id="hidecolours">&nbsp;</a>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <h3 class="columns three">Number of seats:</h3>
-                        <div class="columns nine">
-                            <div class="dropdown" style="width: 100%;">
-                                <select style="width: 100%;">
-                                    <option value="dropdown">2-Seater</option>
-                                    <option value="option1">Price: Low to High</option>
-                                    <option value="option2">Price: High to Low</option>
-                                    <option value="option3">Promotions</option>
-                                    <option value="option4">Customer Ratings</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div>
-                            <h3 class="columns three">Quantity:</h3>
-                            <div class="columns nine">
-                                <div class="dropdown" style="width: 100%">
-                                    <select style="width: 100%;">
-                                        <option value="dropdown">1</option>
-                                        <option value="option1">2</option>
-                                        <option value="option2">3</option>
-                                        <option value="option3">4</option>
-                                        <option value="option4">5</option>
-                                        <option value="option5">5</option>
-                                        <option value="option6">6</option>
-                                        <option value="option7">7</option>
-                                        <option value="option8">8</option>
-                                        <option value="option9">9</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div style="display: flex; clear: both;">
-                            <a class="button primary atbdock" style="text-align: center;">Add to basket</a>
-                            <a class="button wishlist touch"><span></span></a>
-                        </div>
-<<<<<<< HEAD
-                        <div class="bubble">
-                            <h3>How can I get it?</h3>
-                            <ul class="availability">
-                                <li class="sc">Available for store collection</li>
-                                <li class="hd">Available for home delivery</li>
-                            </ul>
-                        </div>
-=======
-                    </div>
-                    <div class="container">
-                        <h3>How can I get it?</h3>
-                        <ul class="availability">
-                            <li class="sc">Available for store collection</li>
-                            <li class="hd">Available for home delivery</li>
-                        </ul>
->>>>>>> origin/gh-pages
-                    </div>
-                </section>
-                <div class="moreinfo">
-                    <div class="container twelve linkbar">
-                        <h3><a>Delivery and returns</a></h3>
-                    </div>
-                    <div class="container twelve" style="border-bottom: 1px solid #CCC;">
-                        <h3>About the product</h3>
-                        <ul>
-                            <li>Durable hardwood frame to survive family life.</li>
-                            <li>Leather effect upholstery for that little touch of luxury.</li>
-                            <li>Removable cushions for hassle-free cleaning.</li>
-                            <li>All Colourmatch products work perfectly together for a coordinated look.</li>
-                            <li>Deep foam cushions for optimum comfort.</li>
-                        </ul>
-                    </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Specification</a></h3>
-                    </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Full Description</a></h3>
-                    </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Q&amp;A</a></h3>
-                    </div>
-<<<<<<< HEAD
-                    <div class="container twelve tabbox">
-=======
-                    <div class="container twelve">
->>>>>>> origin/gh-pages
-                        <h3>Customer reviews</h3>
-                        <div class="reviews">
-                            <span>Overall rating 3.7</span>
-                            <span class="stars">(0)</span> 
-                            <div class="rating"> 
-                                <span>Style</span><br/>
-                                <span class="bar">4.0</span>
-                            </div>
-                            <div class="rating">
-                                <span>Comfort</span><br/>
-                                <span class="bar">4.0</span>
-                            </div>
-                            <div class="rating">
-                                <span>Size</span><br/>
-                                <span class="bar">4.0</span> 
-                            </div>
-                            <div style="clear: both; padding-top: 10px;">
-                                <p>91% would recommend to a friend</p>
-                                <div class="bubble"><strong>staffybenjamin says:</strong><br/>Beautiful piece of furniture lookks the part, modern design, well built and leather look is excellent you wouldn't be able to tell the difference very strong too. Can be a little...</div>
-                            </div>
-                        </div>
-                    </div>
-
-                        <!-- Slider main container -->
-<<<<<<< HEAD
-                    <div class="container tabbox nolink">
-=======
-                    <div class="container">
->>>>>>> origin/gh-pages
-                        <h3>Special offers</h3>
-                        <div class="swiper-container specialoffers-container">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper specialoffers-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Get a Half Price Colourmach Tub Chair when purchased with selected COlourmatch Sofas.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Get a Half Price Colourmach Tub Chair when purchased with selected COlourmatch Sofas.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
-                                </div>
-                            </div>
-                            <!-- If we need pagination -->
-                            <div class="specialoffers-pagination"></div>
-                        </div>
-                    </div>
-
-                    <div class="container twelve linkbar">
-                        <h3><a>Finance details</a></h3>
-                    </div>
-
-                    <!-- Slider main container -->
-<<<<<<< HEAD
-                    <div class="container tabbox nolink">
-=======
-                    <div class="container">
->>>>>>> origin/gh-pages
-                        <h3>Customers who viewed this went on to buy</h3>
-                        <div class="swiper-container products-container prod-one">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper products-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span> 
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod2.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod3.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need pagination -->
-                            <div class="prod-one-pagination"></div>
-                        </div>
-                    </div>
-
-                        <!-- Slider main container -->
-<<<<<<< HEAD
-                    <div class="container tabbox nolink">
-=======
-                    <div class="container">
->>>>>>> origin/gh-pages
-                        <h3>Frequently bought together with this item</h3>
-                        <div class="swiper-container products-container prod-two">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper products-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod2.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span> (0)
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod3.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span></span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- If we need pagination -->
-                            <div class="prod-two-pagination"></div>
-                        </div>
-                    </div>
-                    <div id="contentsliders"></div>
-                </div>   
-                
-                <div class="dock">
-                    <div class="container">
-                        <div class="columns six">
-                            <h4 style="margin: 0;"><small>ColourMatch Leather Effect Tub Sofa - Apple Green - <span class="price" style="font-weight: normal;">&pound;72.99</span></small></h4>        
-                        </div>
-                        <div class="columns six">
-                            <a class="button primary" style="width: 100%">Add to Basket</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-<<<<<<< HEAD
-            
-                
-                <div class="backtotop">
-                	<a id="totop"></a>
-                </div>
-            
-            
-            
-=======
->>>>>>> origin/gh-pages
-            <script type="text/javascript" src="scripts/swiper.jquery.js"></script>
-            
+        <div class="container">
+            <a id="hidepdp">HIDE</a>
         </div>
+        <div class="img-carousel twelve">
+            <div><img src="img/prod-img/prod1.jpg"/></div>
+            <div><img src="img/prod-img/prod2.jpg"/></div>
+            <div><img src="img/prod-img/prod3.jpg"/></div>
+            <div><img src="img/prod-img/prod4.jpg"/></div>
+        </div>
+        <div class="container prodinfo">
+            <div>
+                <h1 class="ten">ColourMatch leather effect tub sofa - Apple Green</h1>
+                <span class="catno two">257/6800</span>
+            </div>
+            <div>
+                <div class="price six">&pound;148.99</div>
+                <div class="six">
+                    <span class="wasprice">&pound;199.99</span>
+                    <span class="saveprice">&pound;51.00</span>
+                </div>
+            </div>
+            <div class="credit twelve">Buy now, pay 6 months later with the <strong>Argos Card</strong></div>
+        </div>
+        <section class="options">
+            <div class="container"></div>
+        </section>
         
     <footer></footer>
+    
+    <script>
+        $(document).ready(function(){
+            $('.img-carousel').slick({
+            });
+        });
+    </script>
         
     </body>
 </html>
