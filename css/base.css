@@ -90,19 +90,21 @@ html { height: 100%; width: 100%; }
 
 .mainheading { font-size: 20px; font-family: argosbook; }
 .subheading { font-size: 20px; font-family: argoscondensed_extrabold; }
-.prodtitle { font-size: 15px; font-family: argosbook; margin: 0 0 5px; font-weight: normal; }
+.prodtitle { font-size: 15px; font-family: argosbook; margin: 10px 0; font-weight: normal; }
 .mainprice { font-size: 30px; font-family: argoscondensed_extrabold; }
 .tlpprice { font-size: 30px; font-family: argoscondensed_extrabold; }
 .tlptitles { font-size: 18px; font-family: argosbook; }
-.wasprice { font-size: 12px; color: #777; font-family: argosbook_italic; }
+.wasprice { font-size: 13px; color: #777; font-family: argosbook_italic; }
 .saving { font-size: 16px; color: #EE3124; font-family: argoscondensed_extrabold; text-transform: uppercase; }
-.savingprice { font-size: 25px; color: #EE3124; font-family: argoscondensed_extrabold; }
+.savingprice { font-size: 16px; color: #EE3124; font-family: argoscondensed_extrabold; }
 .headerlinks { font-size: 13px; }
+.catno { font-size: 12px; font-family: argosbook; margin: 10px 0; font-weight: normal; text-align: right; }
 
 .container {
 	width: 100%;
 	padding: 0 15px;
 	box-sizing: border-box;
+    clear: both;
 }
 .columns { position: relative; }
 .eight, .eleven, .five, .four, .nine, .one, .seven, .ten, .three, .twelve, .two {
@@ -123,10 +125,8 @@ html { height: 100%; width: 100%; }
 .three { width: 23.33333% }
 .four {	width: 31.66667% }
 .five {	width: 40% }
-.six { width: 48.33333%; float: left; margin-left: .83333%; margin-right: .83333% }
-.six:after, .six:before { content: ''; display: table }
+.six { width: 48.33333%; float: left; }
 .seven { width: 56.66667% }
-.seven:after { clear: both }
 .eight { width: 65% }
 .nine { width: 73.33333% }
 .ten { width: 81.66667% }
@@ -139,6 +139,7 @@ body {
     margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    font-family: argosbook;
 }
 
 .mainheader {
@@ -149,6 +150,7 @@ body {
     z-index: 100;
     width: 100%;
 	min-width: 320px;
+    top: 0;
 }
 
 .headerbar {
