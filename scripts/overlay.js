@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     var overlayHeight = $(window).height() - $("header.mainheader").height();
     var topoffset = $(".pdpnav").outerHeight();
     var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
@@ -7,46 +8,73 @@ $(document).ready(function () {
     var imgsizetab = imgsize - $(".pdp-right").width();
     var prodsize = $(".pdp-right").width() - 80;
     var tableft = $(window).width() - $(".pdp-right").width() - 2;
-    $("div.filters-overlay").css("height", overlayHeight);
-    $("div.filters-inner").css("height", filtersInnerHeight);
-    $("div.pdp-overlay").css("height", overlayHeight);
-    $("div.pdp-inner").css("height", overlayHeight);
-    $("div#pdpcontent").css("height", overlayHeight);
-    $("div.main-container").css("height", overlayHeight);
-    $("div.main-container").css("top", $("header.mainheader").height());
-    $(".products-slide").css("width", prodsize);
     $(".dock").hide();
     $(".backtotop").hide();
-    if (windowwidth >= 768) {
-        $(".pdp-left .swiper-container").css("width", imgsizetab);
-        $(".pdp-left").css("width", tableft);
-        $(".pdp-right").css("height", overlayHeight);
-        $(".pdp-right .swiper-container").css("width", prodsize);
-        $(".dock").css("top", topoffset);
-        $(".pdp-right").scroll(function () {
-            var y = $(this).scrollTop();
-            if (y > 300) {
-                $('.dock').slideDown();
-                $('.backtotop').fadeIn();
-            } else {
-                $('.dock').slideUp();
-                $('.backtotop').fadeOut();
-            }
-        });
-    } else {
-        $(".pdp-left").css("width", windowwidth);
-        $(".pdp-right .swiper-container").css("width", prodsize);
-        $(".dock").css("top", "0px");
-        $(".pdp-inner").scroll(function () {
-            var y = $(this).scrollTop();
-            if (y > 10) {
-                $('.dock').slideDown();
-                $('.backtotop').fadeIn();
-            } else {
-                $('.dock').slideUp();
-                $('.backtotop').fadeOut();
-            }
-        });
+    
+    function init () {
+        var overlayHeight = $(window).height() - $("header.mainheader").height();
+        var topoffset = $(".pdpnav").outerHeight();
+        var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
+        var windowwidth = $(window).width();
+        var imgsize = $(window).width() - 80;
+        var imgsizetab = imgsize - $(".pdp-right").width();
+        var prodsize = $(".pdp-right").width() - 80;
+        var tableft = $(window).width() - $(".pdp-right").width() - 2;
+        $("div.main-container").css("height", overlayHeight);
+        $("div.main-container").css("top", $("header.mainheader").height());
+        $("div.filters-overlay").css("height", overlayHeight);
+        $("div.filters-inner").css("height", filtersInnerHeight);
+        $("div.pdp-overlay").css("height", overlayHeight);
+        $("div.pdp-overlay").css("width", $(window).width());
+        $("div.pdp-inner").css("height", overlayHeight);
+        $("div#pdpcontent").css("height", overlayHeight);
+        $(".swiper-container").css("width", imgsize);
+        $(".products-slide").css("width", prodsize);
+        if (windowwidth >= 768) {
+            $(".pdp-left .swiper-container").css("width", imgsizetab);
+            $(".pdp-left").css("width", tableft);
+            $(".pdp-left").css("height", overlayHeight - topoffset);
+            $(".pdp-right").css("height", overlayHeight);
+            $(".pdp-right .swiper-container").css("width", prodsize);
+            $(".dock").css("top", topoffset);
+            $(".pdp-right").scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 300) {
+                    $("#totopmob").hide();
+                    $("#totoptab").show();
+                    stickyin();
+                } else {
+                    $("#totoptab").hide();
+                    $("#totopmob").show();
+                    stickyout();
+                }
+            });
+        } else {
+            $(".pdp-left").css("width", windowwidth);
+            $(".pdp-left").css("height", "auto");
+            $(".pdp-right .swiper-container").css("width", prodsize);
+            $(".dock").css("top", "0px");
+            $(".pdp-inner").scroll(function () {
+                var y = $(this).scrollTop();
+                if (y > 100) {
+                    stickyin();
+                } else {
+                    stickyout();
+                }
+            });
+        }
+    }
+    
+   init();
+    
+    function stickyin () {
+        $('.dock').slideDown();
+        $('.backtotop').fadeIn();
+    }
+    
+    function stickyout () {
+        $('.dock').slideUp();
+        $('.backtotop').fadeOut();
     }
 	
 	$("#foo").slideme({
@@ -66,52 +94,7 @@ $(document).ready(function () {
 
     /* RESIZE */
     $(window).resize(function () {
-        var overlayHeight = $(window).height() - $("header.mainheader").height();
-        var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
-        var imgsize = $(window).width() - 80;
-        var imgsizetab = imgsize - $(".pdp-right").width();
-        var prodsize = $(".pdp-right").width() - 80;
-        var windowwidth = $(window).width();
-        var tableft = $(window).width() - $(".pdp-right").width() - 2;
-        $("div.main-container").css("height", overlayHeight);
-        $("div.filters-overlay").css("height", overlayHeight);
-        $("div.filters-inner").css("height", filtersInnerHeight);
-        $("div.pdp-overlay").css("height", overlayHeight);
-        $("div.pdp-overlay").css("width", $(window).width());
-        $("div.pdp-inner").css("height", overlayHeight);
-        $("div#pdpcontent").css("height", overlayHeight);
-        $(".swiper-container").css("width", imgsize);
-        $(".products-slide").css("width", prodsize);
-        if (windowwidth >= 768) {
-            $(".pdp-left .swiper-container").css("width", imgsizetab);
-            $(".pdp-left").css("width", tableft);
-            $(".pdp-right .swiper-container").css("width", prodsize);
-            $(".pdp-right").css("height", overlayHeight);
-            $(".dock").css("top", topoffset);
-            $(".pdp-right").scroll(function () {
-                var y = $(this).scrollTop();
-                if (y > 300) {
-                    $('.dock').slideDown();
-                    $('.backtotop').slideUp();
-                } else {
-                    $('.dock').slideUp();
-                    $('.backtotop').slideDown();
-                }
-            });
-        } else {
-            $(".pdp-left").css("width", windowwidth);
-            $(".dock").css("top", "0px");
-            $(".pdp-inner").scroll(function () {
-                var y = $(this).scrollTop();
-                if (y > 10) {
-                    $('.dock').slideDown();
-                    $('.backtotop').slideUp();
-                } else {
-                    $('.dock').slideUp();
-                    $('.backtotop').slideDown();
-                }
-            });
-        }
+        init();
     });
 
     /* FILTERS */
@@ -181,6 +164,7 @@ $(document).ready(function () {
                     $.getScript('scripts/swiper.jquery.js', function () {
                         var imgsize = $(".pdp-left").width() - 80;
                         var prodsize = $(".pdp-right").width() - 80;
+                        $("#fooscript").replaceWith('<script>$("#foo").slideme({arrows: true,pagination: "numbers",css3: true,loop: true,resizable: { width: 320, height: 240 }, thumbs: { width: 48, height: 48 } });</script>');
                         $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize + 'px; height: auto; } </style> <script> var swiper = new Swiper(".swiper-container"); </script>');
                         $("#contentsliders").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize + 'px !important; height: auto;  .products-slide { width: ' + prodsize + 'px !important; height: auto; } </style> <script> var swiper = new Swiper(".prod-one"); var swiper = new Swiper(".prod-two"); </script>');
                     });
@@ -190,12 +174,13 @@ $(document).ready(function () {
     });
 	
 	/* BACK TO TOP */
-	$("#totop").click(function () {
-        if (windowwidth >= 768) {
-            $(".pdp-right").animate({scrollTop: 0},"slow");
-        } else {
-            $(".pdp-inner").animate({scrollTop: 0},"slow");
-        }
+	$("#totoptab").click(function () {
+        $(".pdp-right").animate({scrollTop: 0},"slow");
+	});
+    
+    
+	$("#totopmob").click(function () {
+        $(".pdp-inner").animate({scrollTop: 0},"slow");
 	});
     
 });
