@@ -10,16 +10,17 @@
         <meta http-equiv="Set-Cookie" content="LastBrowseCookie=http%3A%2F%2Fwww.dxax2wcsit00101.argos.co.uk%2Fwebapp%2Fwcs%2Fstores%2Fservlet%2FProductDisplay%3FcatalogId%3D24551%26version%3Dbeta%26langId%3D110%26partNumber%3D9806061%26storeId%3D10151; path=/">
         <link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.argos.co.uk/m/static/Product/partNumber/9806061.htm">
         <link rel="icon" href="http://www.argos.co.uk/wcsstore/argos/v2/public/img/favicon.ico" type="image/x-icon">
+        
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/slideme.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
-        <script type="text/javascript" src="scripts/accordion.js" defer></script>    
-        <script type="text/javascript" src="scripts/overlay.js" defer></script>       
-        <script type="text/javascript" src="slick/slick.min.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+        <script type="text/javascript" src="scripts/accordion.js" async></script>     
+        <script type="text/javascript" src="scripts/overlay.js" async></script>      
+        <script type="text/javascript" src="scripts/jquery.slideme2.js" async></script>    
 
         <title>Argos test template</title>
     </head>
@@ -35,8 +36,8 @@
             </ul>
         </header>
         
-        <div class="container">
-        
+        <div class="container main-container">
+                
             <div class="twelve results">
                 <span>"Search term"</span><span>12 results</span>
             </div>
@@ -56,6 +57,16 @@
                 <div class="columns three"><a class="button field fullwidth" id="showfilters">Filters</a></div>
                 <div class="columns three"><a class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
             </div>
+            
+            <div id="foo">
+                <ul class="slideme">
+                    <li><img src="img/prod-img/prod1.jpg"/></li>
+                    <li><img src="img/prod-img/prod2.jpg"/></li>
+                    <li><img src="img/prod-img/prod3.jpg"/></li>
+                    <li><img src="img/prod-img/prod4.jpg"/></li>
+                </ul>
+            </div>
+	</script>
             
             <div class="twelve product">
                 <a id="showpdp" class="twelve" href="pdp.html">
@@ -252,7 +263,7 @@
         </div>
             
         <div class="filters-overlay">
-            <div class="filters-inner">
+            <div class="filters-inner filters-out">
                 <div class="accordion">
                     <div class="accordion-section">
                         <a class="accordion-section-title" href="#accordion-1">Colour<span></span></a>
@@ -384,37 +395,28 @@
                     </div><!--end .accordion-section-->
                 </div>
             </div>
-            <div class="sticky">
+            <div class="sticky filters-out">
                 <a class="button primary">Apply</a>
                 <a class="button" id="hidefilters">Cancel</a>
             </div>
         </div>
         
         <div class="pdp-overlay">
-            <div class="pdp-inner">
+            <div class="pdp-inner pdp-out">
                 <!-- PDP INJECTS HERE -->
             </div>
         </div>
         
-    <footer></footer>
-    
+    <footer></footer>      
+        
+
     <script>
-        $(document).ready(function(){
-            $('.img-carousel').slick({
-            });
+        $( "a#showpdp" ).click(function( event ) {
+          event.preventDefault();
         });
     </script>
         
         
-        
-        <script>
-            $( "a#showpdp" ).click(function( event ) {
-              event.preventDefault();
-              $( "<div>" )
-                .append( "default " + event.type + " prevented" )
-                .appendTo( "#log" );
-            });
-        </script>
         
     </body>
 </html>

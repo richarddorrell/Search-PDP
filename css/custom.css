@@ -3,14 +3,7 @@
 	margin-left: 0;
 	float: left;
 }
-.container:after {
-	content: " ";
-	display: block
-}
-.eight:after, .eight:before, .eleven:after, .eleven:before, .five:after, .five:before, .four:after, .four:before, .nine:after, .nine:before, .one:after, .one:before, .seven:after, .seven:before, .ten:after, .ten:before, .three:after, .three:before, .twelve:after, .twelve:before, .two:after, .two:before {
-	display: table;
-	content: ''
-}
+
 .one { width: 3.8834% }
 .two { width: 12.6211% }
 .three { width: 21.3588% }
@@ -35,6 +28,12 @@
 }
 
 .fulfilment-tab { width: 45.5% }
+
+.main-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
 
 .view p { 
     display: block;
@@ -65,7 +64,9 @@
   padding: 0 10px; 
   font-size: 15px; 
   line-height: 48px;
-  box-sizing: border-box;  }
+  box-sizing: border-box; 
+    text-align: center;
+}
 
 .primary { 
   height: 48px; 
@@ -84,6 +85,28 @@
 
 .secondary { 
   color: #F7941D; }
+
+.wishlist { 
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    float: right;
+    margin-left: 15px;
+}
+
+.wishlist span {
+    background: transparent url("../img/wishlist.png") no-repeat 50% 0;
+    background-size: contain;
+    width: 100%;
+    height: 20px;
+    display: block;
+}
+
+.touch {
+    min-width: 48px;
+    min-height: 48px;
+}
 
 .button:active { 
   background-color: #F7941D;
@@ -121,13 +144,13 @@ input[type=text]:focus {
 .dropdown { 
   width: 140px; overflow: hidden; /*border-right: 1px solid #CCC;*/ }
 .dropdown select { 
-  width: 160px; background: transparent url("../img/dropdown.png") no-repeat 95% 50%; }
+  width: 160px; background: #FFF url("../img/dropdown.png") no-repeat 95% 50%; }
 .dropdown select:hover { 
-  cursor: pointer; background: transparent url("../img/dropdown_focus.png") no-repeat 95% 50%; }
+  cursor: pointer; background: #FFF url("../img/dropdown_focus.png") no-repeat 95% 50%; }
 .dropdown option {
   padding: 10px; }
 
-.results { margin-top: 60px; font-family: argosbook; }
+.results { font-family: argosbook; }
 .results span { margin: 15px 0; float: left; font-weight: bold; }
 .results span + span { float: right; font-weight: normal; }
 
@@ -149,18 +172,41 @@ input[type=text]:focus {
 .filters-overlay {
     width: 100%;
     position: absolute;
-    background-color: #FFF;
     z-index: 50;
-    -webkit-animation-duration: 0.2s;
-    -webkit-animation-name: filterslide;  
+    display: none;
 }
 
-@-webkit-keyframes filterslide {
-    100% { top: 60px; }
+.filters-inner {
+    overflow-y: scroll;
+    width: 100%;
+    position: fixed;
+    background-color: #FFF;
+     transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+}
+    
+
+.filters-in {
+    animation: filters-in 0.3s forwards;
+    -webkit-animation: filters-in 0.3s forwards;
+    -moz-animation: filters-in 0.3s forwards;
 }
 
-@keyframes filterslide {
-    100% { top: 60px; }
+.filters-out {
+    animation: filters-out 0.3s forwards;
+    -webkit-animation: filters-out 0.3s forwards;
+    -moz-animation: filters-out 0.3s forwards;
+}
+
+@-webkit-keyframes filters-in {
+    0% { transform: translateY(-100%); -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0%); -webkit-transform: translateY(0%); -moz-transform: translateY(0%); opacity: 1; }
+}
+
+@-webkit-keyframes filters-out {
+    0% { transform: translateY(0%); -webkit-transform: translateY(0%); -moz-transform: translateY(0%); opacity: 1; }
+    100% { transform: translateY(-100%); -webkit-transform: translateY(-100%); -moz-transform: translateY(-100%); opacity: 0; }
 }
 
 .filters-overlay .sticky {
@@ -180,13 +226,6 @@ input[type=text]:focus {
     height: 40px;
     line-height: 40px;
 }
-
-.filters-inner {
-    overflow-y: scroll;
-    width: 100%;
-    position: fixed;
-}
-
 .accordion, .accordion * {
     -webkit-box-sizing:border-box; 
     -moz-box-sizing:border-box; 
@@ -284,50 +323,374 @@ label {
   -ms-user-select: none;
   user-select: none; }
 
-.img-carousel {
-    height: 300px;
-    width: 100%;
-    clear: both;
-}
-.img-carousel img {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    
-}
-
 .pdp-overlay {
     position: absolute;
     z-index: 50;  
+    display: none;
+}
+
+.prodinfo .reviews, .products-slide .reviews {
+    background: transparent url("../img/stars.png") no-repeat;
+    display: block;
+    background-size: contain;
+    height: 20px;
+    width: 150px;
+    margin: 0 auto 10px;
+    text-align: right;
 }
 
 .pdp-inner {
     overflow-y: scroll;
+    overflow-x: hidden;
     position: fixed;
     background-color: #FFF;
-     transform: translateX(100%);
+    transform: translateX(100%);
     -webkit-transform: translateX(100%);  
+    -moz-transform: translateX(100%);
+    width: 100%;
 }
 
 .pdp-in {
-    animation: pdp-in 0.5s forwards;
-    -webkit-animation: pdp-in 0.5s forwards;
+    animation: pdp-in 0.3s forwards;
+    -webkit-animation: pdp-in 0.3s forwards;
+    -moz-animation: pdp-in 0.3s forwards;
 }
 
 .pdp-out {
-    animation: pdp-out 0.5s forwards;
-    -webkit-animation: pdp-out 0.5s forwards;
+    animation: pdp-out 0.3s forwards;
+    -webkit-animation: pdp-out 0.3s forwards;
+    -moz-animation: pdp-out 0.3s forwards;
 }
 
 @-webkit-keyframes pdp-in {
-    100% { transform: translateX(0%); }
+    0% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); opacity: 1; }
 }
 
 @-webkit-keyframes pdp-out {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(100%); }
+    0% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); opacity: 1; }
+    100% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%);opacity: 0; }
 }
 
-@keyframes pdpslide {
-    100% { left: 0px; }
+#pdpcontent {
+}
+
+.flags span {
+    font-size: 0.7em;
+    padding: 3px 5px;
+    color: #FFF;
+    margin-right: 1px;
+}
+
+.flagnew {
+    background-color: #009fd0;
+}
+
+.flagonline {
+    background-color: #f7941d;
+}
+
+#pdpcontent .flags {
+    position: absolute;
+    top: 65px;
+    left: 15px;
+    z-index: 100;
+}
+
+.prodinfo { z-index: 10; }
+
+.prodinfo > div { clear: both; }
+
+section.options {
+    clear: both;
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #CCC;
+}
+
+section.options .container {
+    border-top: 1px solid #CCC;
+    padding: 15px;
+    clear: both;
+}
+
+section.options h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1em;
+    height: 48px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prodinfo .credit {
+    font-size: 0.8em;
+    padding: 5px 0;
+    background-color: #EE3124;
+    text-align: center;
+    color: #FFF;
+    margin: 10px 0 15px;
+}
+
+section.options .dropdown, section.options .button { margin-bottom: 15px; }
+
+section.options a.swatch, section.options .expand, section.options .collapse {
+    width: 48px;
+    height: 48px;
+    margin: 0 7px 15px 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    float: left;
+}
+
+section.options .expand, section.options .collapse {
+    float: right;
+    background: #FFF url("../img/chevron-down.png") no-repeat 50% 50%;
+    margin-right: 0;
+    height: 46px;
+    width: 46px;
+    border: 1px solid #CCC;
+}
+
+section.options .collapse {
+    float: left;
+    background: #FFF url("../img/chevron-up.png") no-repeat 50% 50%;
+}
+
+section.options a.swatch.green { background-color: #00aa50; }
+section.options a.swatch.red { background-color: #ee3124; }
+section.options a.swatch.purple { background-color: #913493; }
+section.options a.swatch.blue { background-color: #3777bc; }
+section.options a.swatch.yellow { background-color: #ffe500; }
+
+a.swatch:hover, a.swatch:focus, a.swatch:active {
+	border: 5px solid #F5F5F5;
+	width: 38px !important;
+	height: 38px !important;
+}
+
+section.options .colours {
+    height: 63px;
+    overflow: hidden;
+    transition: all .2s ease-in;
+}
+
+section.options ul.availability {
+    clear: both;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+section.options ul.availability li {
+    height: 35px;
+    padding-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+section.options ul.availability li.sc {
+    background: transparent url("../img/sc.png") no-repeat 0 50%;
+}
+
+section.options ul.availability li.hd {
+    background: transparent url("../img/hd.png") no-repeat 0 50%;
+}
+
+#pdpcontent .linkbar {
+    background: transparent url("../img/chevron.png") no-repeat 95% 50%;
+    height: 48px;
+}
+
+#pdpcontent .linkbar h3 {
+    margin: 0;
+    line-height: 48px;
+}
+
+
+#pdpcontent .linkbar h3 a {
+    width: 100%;
+    display: block;
+}
+
+#pdpcontent h3 {
+    font-size: 16px;
+}
+
+.moreinfo .container {
+    border-bottom: 1px solid #CCC;
+    display: table;    
+}
+
+#slideshow img {
+}
+
+.reviews span {
+    text-transform: uppercase;
+    color: #BBB;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.reviews .rating {
+    float: left;
+    width: 110px;
+}
+
+.reviews .rating .bar {
+    display: block;
+    float: left;
+    width: 74px;
+    height: 15px;
+    background: transparent url("../img/rating.png") no-repeat 0 50%;
+    text-indent: 80px;
+}
+
+.reviews span.stars {
+    display: block;
+    width: 120px;
+    height: 20px;
+    background: transparent url("../img/stars.png") no-repeat;
+    background-size: contain;
+    text-indent: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.bubble {
+    border: 1px solid #CCC;
+    padding: 15px;
+    background-color: #FAFAFA;
+    margin-bottom: 15px;
+}
+
+.bubble h3 {
+	height: auto !important;
+	margin-bottom: 15px !important;
+}
+
+.options .bubble {
+	background: #FFF url("../img/chevron.png") no-repeat 95% 50%;
+	margin-bottom: 0;
+}
+
+.specialoffers-container, .specialoffers-wrapper {
+    height: auto !important;
+}
+
+.specialoffers-slide div {
+    margin: 0 7px 15px;
+    background-color: #EE3124;
+    padding: 15px;
+    color: #FFF;
+}
+
+.products-container {
+    margin-bottom: 15px !important;
+}
+
+.otherprod img {
+    height: auto;
+}
+
+.otherprod h4 {
+    clear: both;
+    margin: 0 auto 10px;
+    text-align: center;
+    width: 90%;
+}
+
+.otherprod {
+    float: left;
+    width: 100%;
+}
+
+.options .primary {
+    flex-grow: 1;    
+}
+
+.dock {
+    background-color: #F5F5F5;
+    padding: 15px 0;
+    position: fixed;
+    border-bottom: 1px solid #CCC;
+    z-index: 100;
+    width: 100%;
+    display: none;
+}
+
+.pdpnav {
+    background-color: #F5F5F5;
+    padding: 15px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.pdpnav .left {
+    float: left;
+    width: 10px;
+    height: 16px;
+    display: block;
+    background: transparent url("../img/chevron-left.png") no-repeat;
+    background-size: contain;
+}
+
+.pdpnav .searchterm {
+    text-align: center;
+    width: 100%;
+}
+
+.pdpnav .right {
+    float: right;
+    width: 10px;
+    height: 16px;
+    display: block;
+    background: transparent url("../img/chevron.png") no-repeat;
+    background-size: contain;
+}
+
+.pdp-left {
+    position: relative;
+    float: left;
+}
+
+.slideme {
+max-width: 990px;
+max-height: 450px;
+width: 100%;
+height: 100%;
+}
+
+.backtotop {
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	background: #FFF url("../img/chevron-up.png") no-repeat 50% 50%;
+	border: 1px solid #CCC;
+	width: 46px;
+	height: 46px;
+	box-shadow: 0 0 15px #CCC;
+	z-index: 150;
+}
+
+.backtotop a {
+    display: block;
+	width: 46px;
+	height: 46px;
+}
+
+@media only screen and (min-device-width : 768px) {
+    .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
+    .pdp-left { overflow: hidden; }
+    .dock { width: 40%; }
+	.moreinfo { background-color: #F5F5F5; padding: 0 15px 15px; display: table; }
+	.moreinfo .container { border-bottom: none; }
+	.moreinfo .linkbar { background: #FFF url("../img/chevron.png") no-repeat 95% 50% !important; border: 1px solid #CCC; margin: 15px 0 0 0; }
+	.tabbox { background: #FFF url("../img/chevron.png") no-repeat 95% 20px !important; border: 1px solid #CCC !important; margin: 15px 0 0 0; overflow: hidden; float: left; }
+	.tabbox.nolink { background-image: none !important; }
+    #pdpcontent { position: fixed; }
 }
