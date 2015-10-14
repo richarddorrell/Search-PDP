@@ -555,6 +555,12 @@ a.swatch:hover, a.swatch:focus, a.swatch:active {
 	border-color: #f7941d;
 }
 
+a.swatch:hover, a.swatch:focus, a.swatch:active {
+	border: 5px solid #F5F5F5;
+	width: 38px !important;
+	height: 38px !important;
+}
+
 section.options .colours {
     height: 63px;
     overflow: hidden;
@@ -747,6 +753,7 @@ section.options ul.availability li.hd {
 }
 
 .slideme {
+<<<<<<< HEAD
     width: 80%;
     height: 100%;
     margin: 0 auto !important;
@@ -760,6 +767,15 @@ section.options ul.availability li.hd {
 }
 
 .backtotop, .mobbacktotop {
+=======
+max-width: 990px;
+max-height: 450px;
+width: 100%;
+height: 100%;
+}
+
+.backtotop {
+>>>>>>> origin/gh-pages
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -769,19 +785,28 @@ section.options ul.availability li.hd {
 	height: 46px;
 	box-shadow: 0 0 15px #CCC;
 	z-index: 150;
+<<<<<<< HEAD
     display: none;
 }
 
 .backtotop a, .mobbacktotop a {
+=======
+}
+
+.backtotop a {
+>>>>>>> origin/gh-pages
     display: block;
 	width: 46px;
 	height: 46px;
 }
 
+<<<<<<< HEAD
 .gallery-thumbs { height: 48px; display: none; }
 .gallery-thumbs .swiper-slide { width: 48px !important; }
 .swiper-pagination { display: block; }
 
+=======
+>>>>>>> origin/gh-pages
 @media only screen and (min-device-width : 768px) {
     .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
     .pdp-left { overflow: hidden; }
@@ -792,8 +817,11 @@ section.options ul.availability li.hd {
 	.tabbox { background: #FFF url("../img/chevron.png") no-repeat 95% 20px !important; border: 1px solid #CCC !important; margin: 15px 0 0 0; overflow: hidden; float: left; }
 	.tabbox.nolink { background-image: none !important; }
     #pdpcontent { position: fixed; }
+<<<<<<< HEAD
     nav.pagination { position: absolute; bottom: 0; z-index: 100; }
     .gallery-thumbs { display: block; }
     .swiper-pagination { display: none; }
     .pdp-inner { position: fixed; }
+=======
+>>>>>>> origin/gh-pages
 }
