@@ -6,16 +6,9 @@ $(document).ready(function () {
     var windowwidth = $(window).width();
     var imgsize = $(window).width() - 80;
     var imgsizetab = imgsize - $(".pdp-right").width();
-<<<<<<< HEAD
     var carouselmaxsize = overlayHeight - topoffset - $(".gallery-thumbs").outerHeight() - 45;
     var prodsize = $(".pdp-right").width() - 80;
     var tableft = $(window).width() - $(".pdp-right").width() - 2;
-=======
-    var prodsize = $(".pdp-right").width() - 80;
-    var tableft = $(window).width() - $(".pdp-right").width() - 2;
-    $(".dock").hide();
-    $(".backtotop").hide();
->>>>>>> origin/gh-pages
     
     function init () {
         var overlayHeight = $(window).height() - $("header.mainheader").height();
@@ -36,10 +29,7 @@ $(document).ready(function () {
         $("div.pdp-inner").css("height", overlayHeight);
         $("div#pdpcontent").css("height", overlayHeight);
         $(".swiper-container").css("width", imgsize);
-<<<<<<< HEAD
         $(".main-swiper").css("height", overlayHeight - topoffset - $(".gallery-thumbs").outerHeight() - 45);
-=======
->>>>>>> origin/gh-pages
         $(".products-slide").css("width", prodsize);
         if (windowwidth >= 768) {
             $(".pdp-left .swiper-container").css("width", imgsizetab);
@@ -47,7 +37,6 @@ $(document).ready(function () {
             $(".pdp-left").css("height", overlayHeight - topoffset);
             $(".pdp-right").css("height", overlayHeight);
             $(".pdp-right .swiper-container").css("width", prodsize);
-<<<<<<< HEAD
             $(".main-swiper").css("height", overlayHeight - topoffset - $(".gallery-thumbs").outerHeight);
             $(".swiper-slide img").css("max-height", carouselmaxsize);
             $(".swiper-slide img").css("max-width", carouselmaxsize);
@@ -72,32 +61,6 @@ $(document).ready(function () {
                     mobstickyin();
                 } else {
                     mobstickyout();
-=======
-            $(".dock").css("top", topoffset);
-            $(".pdp-right").scroll(function () {
-                var y = $(this).scrollTop();
-                if (y > 300) {
-                    $("#totopmob").hide();
-                    $("#totoptab").show();
-                    stickyin();
-                } else {
-                    $("#totoptab").hide();
-                    $("#totopmob").show();
-                    stickyout();
-                }
-            });
-        } else {
-            $(".pdp-left").css("width", windowwidth);
-            $(".pdp-left").css("height", "auto");
-            $(".pdp-right .swiper-container").css("width", prodsize);
-            $(".dock").css("top", "0px");
-            $(".pdp-inner").scroll(function () {
-                var y = $(this).scrollTop();
-                if (y > 100) {
-                    stickyin();
-                } else {
-                    stickyout();
->>>>>>> origin/gh-pages
                 }
             });
         }
@@ -114,7 +77,6 @@ $(document).ready(function () {
         $('.dock').slideUp();
         $('.backtotop').fadeOut();
     }
-<<<<<<< HEAD
     
     function mobstickyin () {
         $('.mobdock').slideDown();
@@ -125,23 +87,6 @@ $(document).ready(function () {
         $('.mobdock').slideUp();
         $('.mobbacktotop').fadeOut();
     }
-=======
-	
-	$("#foo").slideme({
-		arrows: true,
-		pagination: "numbers",
-		css3: true,
-		loop: true,
-		resizable: {
-			width: 320,
-			height: 240
-		},
-		thumbs: {
-			width: 48,
-			height: 48
-		}
-	});
->>>>>>> origin/gh-pages
 
     /* RESIZE */
     $(window).resize(function () {
@@ -158,15 +103,9 @@ $(document).ready(function () {
             $("body").css("overflow", "auto");
             $("div.filters-overlay").delay(300).hide(0);
         }
-<<<<<<< HEAD
 		if ($("div.refinenav").hasClass("filters-in")) {
             $("div.refinenav").removeClass("filters-in");
             $("div.refinenav").addClass("filters-out");
-=======
-		if ($("div.sticky").hasClass("filters-in")) {
-            $("div.sticky").removeClass("filters-in");
-            $("div.sticky").addClass("filters-out");
->>>>>>> origin/gh-pages
         }
     });
 
@@ -177,35 +116,21 @@ $(document).ready(function () {
             $("div.filters-inner").addClass("filters-in");
             $("body").css("overflow", "hidden");
         }
-<<<<<<< HEAD
         if ($("div.refinenav").hasClass("filters-out")) {
             $("div.refinenav").removeClass("filters-out");
             $("div.refinenav").addClass("filters-in");
-=======
-        if ($("div.sticky").hasClass("filters-out")) {
-            $("div.sticky").removeClass("filters-out");
-            $("div.sticky").addClass("filters-in");
->>>>>>> origin/gh-pages
         }
     });
 
     /* COLOURS */
     $("#showcolours").click(function () {
-<<<<<<< HEAD
         $("section.options div.colours").css("height", "auto");
-=======
-        $("div.colours").css("height", "auto");
->>>>>>> origin/gh-pages
         $("#showcolours").css("display", "none");
         $("#hidecolours").css("display", "block");
     });
 
     $("#hidecolours").click(function () {
-<<<<<<< HEAD
         $("section.options div.colours").css("height", "63px");
-=======
-        $("div.colours").css("height", "63px");
->>>>>>> origin/gh-pages
         $("#hidecolours").css("display", "none");
         $("#showcolours").css("display", "block");
     });
@@ -235,16 +160,10 @@ $(document).ready(function () {
                     $.getScript('scripts/swiper.jquery.js', function () {
                         var imgsize = $(".pdp-left").width() - 80;
                         var prodsize = $(".pdp-right").width() - 80;
-<<<<<<< HEAD
                         $("#swiperscript").replaceWith('<script> var mainSwiper = new Swiper(".main-swiper", { pagination: ".swiper-pagination" }); var swiperThumbs = new Swiper(".gallery-thumbs", { spaceBetween: 15, centeredSlides: true, slidesPerView: "auto", touchRatio: 0.2, slideToClickedSlide: true }); mainSwiper.params.control = swiperThumbs; swiperThumbs.params.control = mainSwiper; </script>');
                         $("#soscript").replaceWith('<style>.specialoffers-container { width: ' + imgsize + 'px; height: auto; } </style> <script> var soswiper = new Swiper(".specialoffers-container", { loop: true, pagination: ".specialoffers-pagination" }); </script>');
                         $("#viewedslider").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize + 'px !important; height: auto;  .products-slide { width: ' + prodsize + 'px !important; height: auto; } </style> <script> var viewedswiper = new Swiper(".prod-one", { loop: true, pagination: ".prod-one-pagination" }); </script>');
                         $("#freqslider").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize + 'px !important; height: auto;  .products-slide { width: ' + prodsize + 'px !important; height: auto; } </style> <script> var freqswiper = new Swiper(".prod-two", { loop: true, pagination: ".prod-two-pagination" }); </script>');
-=======
-                        $("#fooscript").replaceWith('<script>$("#foo").slideme({arrows: true,pagination: "numbers",css3: true,loop: true,resizable: { width: 320, height: 240 }, thumbs: { width: 48, height: 48 } });</script>');
-                        $("#swiperscript").replaceWith('<style>.swiper-container { width: ' + imgsize + 'px; height: auto; } </style> <script> var swiper = new Swiper(".swiper-container"); </script>');
-                        $("#contentsliders").replaceWith('<style>.products-container { height: auto !important;} .products-wrapper { width: ' + prodsize + 'px !important; height: auto;  .products-slide { width: ' + prodsize + 'px !important; height: auto; } </style> <script> var swiper = new Swiper(".prod-one"); var swiper = new Swiper(".prod-two"); </script>');
->>>>>>> origin/gh-pages
                     });
                 });
             });
@@ -261,7 +180,6 @@ $(document).ready(function () {
         $(".pdp-inner").animate({scrollTop: 0},"slow");
 	});
     
-<<<<<<< HEAD
     /* PLP VIEW CHANGE */
     $("#viewflip").click(function () {
         if ($("div.product").hasClass("twelve")) {
@@ -284,6 +202,4 @@ $(document).ready(function () {
         }
     });
     
-=======
->>>>>>> origin/gh-pages
 });
