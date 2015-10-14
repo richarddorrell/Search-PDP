@@ -37,28 +37,52 @@
             
             <div class="pdpnav">
                 <div class="container" style="display: flex; align-items: center;">
-                    <a class="left"></a>
+                    <a class="left" id="hidepdp"></a>
                     <span class="searchterm">Search: <span>"Leather Sofa"&nbsp;&nbsp;&nbsp;&nbsp;1/207 Results</span></span>
                     <a class="right"></a>
                 </div>
             </div>
             
-            <div class="pdp-left">            
-                <div class="container">
-                    <a id="hidepdp" style="margin: 15px 0; display: block;">Back</a>
-                </div>
-                <!-- Slider main container -->
-                <div class="swiper-container">
+            <div class="pdp-left">               
+                
+                 <!-- Slider main container -->
+                <div class="swiper-container main-swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide"><img src="img/prod-img/prod1.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod2.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod3.jpg"/></div>
-                        <div class="swiper-slide"><img src="img/prod-img/prod4.jpg"/></div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod1.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod2.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod3.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod4.jpg"/>
+                        </div>
                     </div>
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination">X / 5</div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                 <div class="swiper-container gallery-thumbs">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod1.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod2.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod3.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/prod-img/prod4.jpg"/>
+                        </div>
+                    </div>
                 </div>
                 <div id="swiperscript"></div>
 
@@ -93,11 +117,11 @@
                         <h3 class="columns three">Colour:</h3>
                         <div class="columns nine colours">
                             <a class="expand" id="showcolours">&nbsp;</a>
-                            <a class="swatch green">Green</a>
-                            <a class="swatch red">Red</a>
-                            <a class="swatch purple">Purple</a>
-                            <a class="swatch blue">Blue</a>
-                            <a class="swatch yellow">Yellow</a>
+                            <a class="swatch green"><span>Green</span></a>
+                            <a class="swatch red"><span>Red</span></a>
+                            <a class="swatch purple"><span>Purple</span></a>
+                            <a class="swatch blue"><span>Blue</span></a>
+                            <a class="swatch yellow"><span>Yellow</span></a>
                             <a class="collapse" id="hidecolours">&nbsp;</a>
                         </div>
                     </div>
@@ -116,36 +140,30 @@
                         </div>
                     </div>
                     <div class="container">
-                        <div>
-                            <h3 class="columns three">Quantity:</h3>
-                            <div class="columns nine">
-                                <div class="dropdown" style="width: 100%">
-                                    <select style="width: 100%;">
-                                        <option value="dropdown">1</option>
-                                        <option value="option1">2</option>
-                                        <option value="option2">3</option>
-                                        <option value="option3">4</option>
-                                        <option value="option4">5</option>
-                                        <option value="option5">5</option>
-                                        <option value="option6">6</option>
-                                        <option value="option7">7</option>
-                                        <option value="option8">8</option>
-                                        <option value="option9">9</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                         <div style="display: flex; clear: both;">
+                            <div class="dropdown" style="width: 60px; margin-right: 15px;">
+                                <select style="width: 100%; background-position: 80% 50%;">
+                                    <option value="dropdown">1</option>
+                                    <option value="option1">2</option>
+                                    <option value="option2">3</option>
+                                    <option value="option3">4</option>
+                                    <option value="option4">5</option>
+                                    <option value="option6">6</option>
+                                    <option value="option7">7</option>
+                                    <option value="option8">8</option>
+                                    <option value="option9">9</option>
+                                </select>
+                            </div>
                             <a class="button primary atbdock" style="text-align: center;">Add to basket</a>
                             <a class="button wishlist touch"><span></span></a>
                         </div>
-                    </div>
-                    <div class="container">
-                        <h3>How can I get it?</h3>
-                        <ul class="availability">
-                            <li class="sc">Available for store collection</li>
-                            <li class="hd">Available for home delivery</li>
-                        </ul>
+                        <div class="bubble">
+                            <h3>How can I get it?</h3>
+                            <ul class="availability">
+                                <li class="sc">Available for store collection</li>
+                                <li class="hd">Available for home delivery</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 <div class="moreinfo">
@@ -171,7 +189,7 @@
                     <div class="container twelve linkbar">
                         <h3><a>Q&amp;A</a></h3>
                     </div>
-                    <div class="container twelve">
+                    <div class="container twelve tabbox">
                         <h3>Customer reviews</h3>
                         <div class="reviews">
                             <span>Overall rating 3.7</span>
@@ -196,7 +214,7 @@
                     </div>
 
                         <!-- Slider main container -->
-                    <div class="container">
+                    <div class="container tabbox nolink">
                         <h3>Special offers</h3>
                         <div class="swiper-container specialoffers-container">
                             <!-- Additional required wrapper -->
@@ -225,13 +243,14 @@
                             <div class="specialoffers-pagination"></div>
                         </div>
                     </div>
+                    <div id="soscript"></div>
 
                     <div class="container twelve linkbar">
                         <h3><a>Finance details</a></h3>
                     </div>
 
                     <!-- Slider main container -->
-                    <div class="container">
+                    <div class="container tabbox nolink">
                         <h3>Customers who viewed this went on to buy</h3>
                         <div class="swiper-container products-container prod-one">
                             <!-- Additional required wrapper -->
@@ -272,9 +291,10 @@
                             <div class="prod-one-pagination"></div>
                         </div>
                     </div>
+                    <div id="viewedslider"></div>
 
                         <!-- Slider main container -->
-                    <div class="container">
+                    <div class="container tabbox nolink">
                         <h3>Frequently bought together with this item</h3>
                         <div class="swiper-container products-container prod-two">
                             <!-- Additional required wrapper -->
@@ -325,7 +345,7 @@
                             <div class="prod-two-pagination"></div>
                         </div>
                     </div>
-                    <div id="contentsliders"></div>
+                    <div id="freqslider"></div>
                 </div>   
                 
                 <div class="dock">
@@ -340,6 +360,14 @@
                 </div>
                 
             </div>
+            
+            
+                
+                <div class="backtotop">
+                	<a id="totoptab"></a>
+                </div>
+            
+            
             
             <script type="text/javascript" src="scripts/swiper.jquery.js"></script>
             

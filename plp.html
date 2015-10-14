@@ -14,11 +14,12 @@
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
         <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
         <script type="text/javascript" src="scripts/accordion.js" async></script>     
-        <script type="text/javascript" src="scripts/overlay.js" async></script>    
+        <script type="text/javascript" src="scripts/overlay.js" async></script>      
 
         <title>Argos test template</title>
     </head>
@@ -41,6 +42,7 @@
             </div>
             
             <div class="twelve filters">
+                <div class="columns three"><a class="button field fullwidth" id="showfilters">Refine</a></div>
                 <div class="columns six">
                     <div class="dropdown" style="width: 100%">
                         <select style="width: 100%">
@@ -52,344 +54,334 @@
                         </select>
                     </div>
                 </div>
-                <div class="columns three"><a class="button field fullwidth" id="showfilters">Filters</a></div>
-                <div class="columns three"><a class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
+                <div class="columns three"><a id="viewflip" class="button view field fullwidth"><p><span></span><span></span><span></span><span></span></p></a></div>
             </div>
             
-            <div class="twelve product">
-                <a id="showpdp" class="twelve" href="pdp.html">
-                    <div class="columns four">
-                        <div class="prodimg"></div>
-                    </div>
-                    <div class="columns eight content">
-                        <div>
-                            <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                            <div class="reviews">
-                                <span>(0)</span> 
+            <div>
+                <div class="columns twelve product rows">
+                    <a id="showpdp" class="twelve" href="pdp.html">
+                        <div class="columns five prodleft">
+                            <div class="prodimg"></div>
+                            <div class="flags flagscolumns">
+                                <span class="flagnew">NEW</span>
+                                <span class="flagonline">ONLINE EXCLUSIVE</span>
                             </div>
-                            <span class="mainprice">&pound;49.99</span>
-                            <div class="otherpricing">
-                                <span class="wasprice">was &pound;53.99</span><br/>
-                                <span class="saving">save &pound;4.00</span>
+                            <div class="colours">
+                                <div class="swatch green"><span>Green</span></div>
+                                <div class="swatch red"><span>Red</span></div>
+                                <div class="swatch purple"><span>Purple</span></div>
+                                <div class="swatch blue"><span>Blue</span></div>
+                                <div class="swatch yellow"><span>Yellow</span></div>
+                                <span>+8</span>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
+                        <div class="columns seven content">
+                            <div>  
+                                <div class="flags">
+                                    <span class="flagnew">NEW</span>
+                                    <span class="flagonline">ONLINE EXCLUSIVE</span>
+                                </div>
+                                <h2 class="prodtitle">ColourMatch leather effect tub sofa - Apple Green</h2>
+                                <div class="reviews">
+                                    <span>(0)</span> 
+                                </div>
+                                <span class="mainprice">&pound;148.99</span>
+                                <div class="otherpricing">
+                                    <span class="wasprice">was &pound;199.99</span><br/>
+                                    <span class="saving">save &pound;51.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
+
+                <div class="columns twelve product rows">
+                    <a class="twelve">
+                        <div class="columns five prodleft">
+                            <div class="prodimg"></div>
+                            <div class="colours"></div>
                         </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
+                        <div class="columns seven content">
+                            <div>
+                                <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
+                                <div class="reviews">
+                                    <span>(0)</span> 
+                                </div>
+                                <span class="mainprice">&pound;49.99</span>
+                                <div class="otherpricing">
+                                    <span class="wasprice">was &pound;53.99</span><br/>
+                                    <span class="saving">save &pound;4.00</span>
+                                </div>
+                            </div>
                         </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
+                    </a>
                 </div>
             </div>
             
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
+            <div>
+                <div class="columns twelve product rows">
+                    <a class="twelve">
+                        <div class="columns five prodleft">
+                            <div class="prodimg"></div>
+                            <div class="flags flagscolumns">
+                                <span class="flagnew">NEW</span>
+                            </div>
+                            <div class="colours">
+                                <div class="swatch green"><span>Green</span></div>
+                                <div class="swatch red"><span>Red</span></div>
+                                <div class="swatch purple"><span>Purple</span></div>
+                            </div>
+                        </div>
+                        <div class="columns seven content">
+                            <div>
+                                <div class="flags">
+                                    <span class="flagnew">NEW</span>
+                                </div>
+                                <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
+                                <div class="reviews">
+                                    <span>(0)</span> 
+                                </div>
+                                <span class="mainprice">&pound;49.99</span>
+                                <div class="otherpricing">
+                                    <span class="wasprice">was &pound;53.99</span><br/>
+                                    <span class="saving">save &pound;4.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
+
+                <div class="columns twelve product rows">
+                    <a class="twelve">
+                        <div class="columns five prodleft">
+                            <div class="prodimg"></div>
+                            <div class="flags flagscolumns">
+                                <span class="flagonline">ONLINE EXCLUSIVE</span>
+                            </div>
+                            <div class="colours">
+                                <div class="swatch green"><span>Green</span></div>
+                                <div class="swatch red"><span>Red</span></div>
+                                <div class="swatch purple"><span>Purple</span></div>
+                                <div class="swatch blue"><span>Blue</span></div>
+                                <div class="swatch yellow"><span>Yellow</span></div>
+                                <span>+5</span>
+                            </div>
                         </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
+                        <div class="columns seven content">
+                            <div>
+                                <div class="flags">
+                                    <span class="flagonline">ONLINE EXCLUSIVE</span>
+                                </div>
+                                <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
+                                <div class="reviews">
+                                    <span>(0)</span> 
+                                </div>
+                                <span class="mainprice">&pound;49.99</span>
+                                <div class="otherpricing">
+                                    <span class="wasprice">was &pound;53.99</span><br/>
+                                    <span class="saving">save &pound;4.00</span>
+                                </div>
+                            </div>
                         </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
+                    </a>
                 </div>
             </div>
             
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
+            <div>
+                <div class="columns twelve product rows">
+                    <a class="twelve">
+                        <div class="columns five prodleft">
+                            <div class="prodimg"></div>
+                            <div class="colours">
+                                <div class="swatch green"><span>Green</span></div>
+                                <div class="swatch red"><span>Red</span></div>
+                                <div class="swatch purple"><span>Purple</span></div>
+                                <div class="swatch blue"><span>Blue</span></div>
+                                <div class="swatch yellow"><span>Yellow</span></div>
+                                <span>+ 5</span>
+                            </div>
                         </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
+                        <div class="columns seven content">
+                            <div>
+                                <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
+                                <div class="reviews">
+                                    <span>(0)</span> 
+                                </div>
+                                <span class="mainprice">&pound;49.99</span>
+                                <div class="otherpricing">
+                                    <span class="wasprice">was &pound;53.99</span><br/>
+                                    <span class="saving">save &pound;4.00</span>
+                                </div>
+                            </div>
                         </div>
-					</div>
-                </div>
-            </div>
-            
-            <div class="twelve product">
-                <div class="columns four">
-                    <div class="prodimg"></div>
-                </div>
-                <div class="columns eight content">
-                	<div>
-                        <h2 class="prodtitle">Gran Turismo 5: Academy Edition PS3 Game</h2>
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <span class="mainprice">&pound;49.99</span>
-                        <div class="otherpricing">
-                            <span class="wasprice">was &pound;53.99</span><br/>
-                            <span class="saving">save &pound;4.00</span>
-                        </div>
-					</div>
+                    </a>
                 </div>
             </div>
             
         </div>
             
         <div class="filters-overlay">
-            <div class="filters-inner filters-out">
-                <div class="accordion">
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-1">Colour<span></span></a>
-                        <div id="accordion-1" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-2">Screen Size (inches)<span></span></a>
-                        <div id="accordion-2" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-3">HD Type<span></span></a>
-                        <div id="accordion-3" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-4">Non HD Type<span></span></a>
-                        <div id="accordion-4" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-5">Brands<span></span></a>
-                        <div id="accordion-5" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-6">3D<span></span></a>
-                        <div id="accordion-6" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-7">By Energy Efficiency Rating<span></span></a>
-                        <div id="accordion-7" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
-                    <div class="accordion-section">
-                        <a class="accordion-section-title" href="#accordion-8">Smart TV<span></span></a>
-                        <div id="accordion-8" class="accordion-section-content">
-                            <form>
-                                <input type="checkbox" name="colour" value="Blue">
-                                <label for="check1">Blue</label><br/>
-                                <input type="checkbox" name="colour" value="Red">
-                                <label for="check1">Red</label><br/>
-                                <input type="checkbox" name="colour" value="Green">
-                                <label for="check1">Green</label><br/>
-                                <input type="checkbox" name="colour" value="Yellow">
-                                <label for="check1">Yellow</label><br/>
-                            </form>
-                        </div><!--end .accordion-section-content-->
-                    </div><!--end .accordion-section-->
+            <div class="refinenav filters-out">
+                <div class="container" style="display: flex;">
+                    <a class="left" id="hidefilters" style="text-indent: 30px;">Back to your results</a>
                 </div>
             </div>
-            <div class="sticky">
-                <a class="button primary">Apply</a>
-                <a class="button" id="hidefilters">Cancel</a>
+            <div class="filters-inner filters-out">
+                <div class="container">
+                    <div class="accordion">
+                        <div style="background-color: #FFF; padding: 15px; border-bottom: 1px solid #CCC;">
+                            <div style="line-height: 48px;">Refine by... <a class="button" style="float: right;">Clear all</a></div>
+                        </div>
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-1">Price<span></span></a>
+                            <div id="accordion-1" class="accordion-section-content">
+                                <div style="padding: 15px; display: flex;">
+                                    <div class="columns five" style="display: flex; line-height: 48px;">
+                                        &pound; <input type="text" class="fullwidth" style="margin-left: 15px;"/>
+                                    </div>
+                                    <div class="columns five" style="display: flex; line-height: 48px;">
+                                        to&nbsp;&pound; <input type="text" class="fullwidth" style="margin-left: 15px;"/>
+                                    </div> 
+                                    <div class="columns two">
+                                        <a class="button fullwidth">Set</a>
+                                    </div>
+                                </div>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-2">Minimum rating<span></span></a>
+                            <div id="accordion-2" class="accordion-section-content">
+                                <div class="stars">
+                                    <form action="">
+                                        <input class="star star-5" id="star-5" type="radio" name="star"/>
+                                        <label class="star star-5" for="star-5"></label>
+                                        <input class="star star-4" id="star-4" type="radio" name="star"/>
+                                        <label class="star star-4" for="star-4"></label>
+                                        <input class="star star-3" id="star-3" type="radio" name="star"/>
+                                        <label class="star star-3" for="star-3"></label>
+                                        <input class="star star-2" id="star-2" type="radio" name="star"/>
+                                        <label class="star star-2" for="star-2"></label>
+                                        <input class="star star-1" id="star-1" type="radio" name="star"/>
+                                        <label class="star star-1" for="star-1"></label>
+                                    </form>
+                                </div>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-3">Brand<span></span></a>
+                            <div id="accordion-3" class="accordion-section-content">
+                                <form>
+                                    <input type="checkbox" name="colour" value="1">
+                                    <label for="check1">The most popular brand (60)</label><br/>
+                                    <input type="checkbox" name="colour" value="2">
+                                    <label for="check1">The 2nd most popular brand (43)</label><br/>
+                                    <input type="checkbox" name="colour" value="3">
+                                    <label for="check1">A brand that's up=and-coming (43)</label><br/>
+                                    <input type="checkbox" name="colour" value="4">
+                                    <label for="check1">And another one (72)</label><br/>
+                                    <input type="checkbox" name="colour" value="5">
+                                    <label for="check1">A pretty average brand (10)</label><br/>
+                                    <input type="checkbox" name="colour" value="6">
+                                    <label for="check1">The brand that almost nobody clicks (1)</label><br/>
+                                </form>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-4">Colour<span></span></a>
+                            <div id="accordion-4" class="accordion-section-content">
+                                <div class="colours">
+                                    <a class="swatch green"><span>Green</span></a>
+                                    <a class="swatch red"><span>Red</span></a>
+                                    <a class="swatch purple"><span>Purple</span></a>
+                                    <a class="swatch blue"><span>Blue</span></a>
+                                    <a class="swatch yellow"><span>Yellow</span></a>
+                                    <a class="button fullwidth">Show all</a>
+                                </div>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-5">Category specific filter<span></span></a>
+                            <div id="accordion-5" class="accordion-section-content">
+                                <form>
+                                    <input type="checkbox" name="colour" value="1">
+                                    <label for="check1">The best version (32)</label><br/>
+                                    <input type="checkbox" name="colour" value="2">
+                                    <label for="check1">The value for money version (22)</label><br/>
+                                    <input type="checkbox" name="colour" value="3">
+                                    <label for="check1">The 'interesting' version (2)</label><br/>
+                                    <input type="checkbox" name="colour" value="4">
+                                    <label for="check1">The 'best of both worlds' version (72)</label><br/>
+                                    <input type="checkbox" name="colour" value="5">
+                                    <label for="check1">The copycat version (10)</label><br/>
+                                    <input type="checkbox" name="colour" value="6">
+                                    <label for="check1">The version nobody wants (1)</label><br/>
+                                </form>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-6">A less popular filter<span></span></a>
+                            <div id="accordion-6" class="accordion-section-content">
+                                <form>
+                                    <input type="checkbox" name="colour" value="Blue">
+                                    <label for="check1">Blue</label><br/>
+                                    <input type="checkbox" name="colour" value="Red">
+                                    <label for="check1">Red</label><br/>
+                                    <input type="checkbox" name="colour" value="Green">
+                                    <label for="check1">Green</label><br/>
+                                    <input type="checkbox" name="colour" value="Yellow">
+                                    <label for="check1">Yellow</label><br/>
+                                </form>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-7">An even less popular filter<span></span></a>
+                            <div id="accordion-7" class="accordion-section-content">
+                                <form>
+                                    <input type="checkbox" name="colour" value="Blue">
+                                    <label for="check1">Blue</label><br/>
+                                    <input type="checkbox" name="colour" value="Red">
+                                    <label for="check1">Red</label><br/>
+                                    <input type="checkbox" name="colour" value="Green">
+                                    <label for="check1">Green</label><br/>
+                                    <input type="checkbox" name="colour" value="Yellow">
+                                    <label for="check1">Yellow</label><br/>
+                                </form>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                        <div class="accordion-section">
+                            <a class="accordion-section-title" href="#accordion-8">A very rarely used filter<span></span></a>
+                            <div id="accordion-8" class="accordion-section-content">
+                                <form>
+                                    <input type="checkbox" name="colour" value="Blue">
+                                    <label for="check1">Blue</label><br/>
+                                    <input type="checkbox" name="colour" value="Red">
+                                    <label for="check1">Red</label><br/>
+                                    <input type="checkbox" name="colour" value="Green">
+                                    <label for="check1">Green</label><br/>
+                                    <input type="checkbox" name="colour" value="Yellow">
+                                    <label for="check1">Yellow</label><br/>
+                                </form>
+                            </div><!--end .accordion-section-content-->
+                        </div><!--end .accordion-section-->
+                    </div>
+                </div>
             </div>
         </div>
-        
+
         <div class="pdp-overlay">
+            <div class="mobdock">
+                <div class="container">
+                    <div class="columns six">
+                        <h4 style="margin: 0;"><small>ColourMatch Leather Effect Tub Sofa - Apple Green - <span class="price" style="font-weight: normal;">&pound;72.99</span></small></h4>        
+                    </div>
+                    <div class="columns six">
+                        <a class="button primary" style="width: 100%">Add to Basket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobbacktotop">
+                <a id="totopmob"></a>
+            </div>
             <div class="pdp-inner pdp-out">
                 <!-- PDP INJECTS HERE -->
             </div>
