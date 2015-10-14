@@ -41,6 +41,7 @@ $(document).ready(function () {
             $(".swiper-slide img").css("max-height", carouselmaxsize);
             $(".swiper-slide img").css("max-width", carouselmaxsize);
             $(".dock").css("top", topoffset);
+            $(".main-container").css("width", windowwidth - $(".filters-overlay").outerWidth());
             $(".pdp-right").scroll(function () {
                 var yt = $(this).scrollTop();
                 if (yt > 380) {
@@ -55,6 +56,7 @@ $(document).ready(function () {
             $(".pdp-right .swiper-container").css("width", prodsize);
             $(".mobdock").css("top", "60px");
             $(".main-swiper").css("height", "auto");
+            $(".main-container").css("width", "auto");
             $(".pdp-inner").scroll(function () {
                 var ym = $(this).scrollTop();
                 if (ym > 700) {
@@ -200,6 +202,12 @@ $(document).ready(function () {
             $(".flagscolumns").css("display", "none");
             $(".content .flags").css("display", "block");
         }
+    });
+    
+    /* SHOW ALL BUTTONS */
+    $(".showall").click(function () {
+        $(this).next().css("display", "block");
+        $(this).css("display", "none");
     });
     
 });

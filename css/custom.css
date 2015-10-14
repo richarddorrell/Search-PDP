@@ -343,7 +343,7 @@ input[type=checkbox] + label {
   cursor:pointer;
   background: url("../img/check_off.png") no-repeat;
     background-size: contain;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
   font: 14px argosbook; }
 
 input[type=checkbox]:checked + label {
@@ -796,4 +796,31 @@ section.options ul.availability li.hd {
     .gallery-thumbs { display: block; }
     .swiper-pagination { display: none; }
     .pdp-inner { position: fixed; }
+    
+    .main-container {
+        float: right;
+        width: 59.9%;
+    }
+    
+    .filters-overlay {
+        float: left;
+        width: 320px;
+        display: block !important;
+        border-right: 1px solid #CCC;
+    }
+    
+    .filters-out {
+        animation: none;
+        -webkit-animation: none;
+    }
+    
+    .filters-inner {
+        transform: none;
+        -webkit-transform: none;
+        position: relative;
+        height: 100% !important;
+        overflow-x: none;
+    }
+    
+    .refinenav { display: none; }
 }
