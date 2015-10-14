@@ -226,7 +226,7 @@ input[type=text]:focus {
 
 .filters-overlay .accordion {
     border: 1px solid #CCC;
-    margin-top: 15px;
+    margin: 15px 0;
 }
 
 div.stars {

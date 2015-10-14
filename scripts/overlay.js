@@ -2,7 +2,7 @@ $(document).ready(function () {
     
     var overlayHeight = $(window).height() - $("header.mainheader").height();
     var topoffset = $(".pdpnav").outerHeight();
-    var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
+    var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight() - $(".refinenav").outerHeight();
     var windowwidth = $(window).width();
     var imgsize = $(window).width() - 80;
     var imgsizetab = imgsize - $(".pdp-right").width();
@@ -13,7 +13,7 @@ $(document).ready(function () {
     function init () {
         var overlayHeight = $(window).height() - $("header.mainheader").height();
         var topoffset = $(".pdpnav").outerHeight();
-        var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight();
+        var filtersInnerHeight = overlayHeight - $("div.sticky").outerHeight() - $(".refinenav").outerHeight();
         var windowwidth = $(window).width();
         var imgsize = $(window).width() - 80;
         var imgsizetab = imgsize - $(".pdp-right").width();
