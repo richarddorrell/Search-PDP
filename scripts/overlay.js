@@ -43,7 +43,7 @@ $(document).ready(function () {
             $(".dock").css("top", topoffset);
             $(".pdp-right").scroll(function () {
                 var yt = $(this).scrollTop();
-                if (yt > 300) {
+                if (yt > 380) {
                     stickyin();
                 } else {
                     stickyout();
@@ -57,7 +57,7 @@ $(document).ready(function () {
             $(".main-swiper").css("height", "auto");
             $(".pdp-inner").scroll(function () {
                 var ym = $(this).scrollTop();
-                if (ym > 100) {
+                if (ym > 700) {
                     mobstickyin();
                 } else {
                     mobstickyout();
