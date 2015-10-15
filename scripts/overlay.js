@@ -8,7 +8,6 @@ $(document).ready(function () {
     var imgsizetab = imgsize - $(".pdp-right").width();
     var carouselmaxsize = overlayHeight - topoffset - $(".gallery-thumbs").outerHeight() - 45;
     var prodsize = $(".pdp-right").width() - 80;
-    var tableft = $(window).width() - $(".pdp-right").width() - 2;
     
     function init () {
         var overlayHeight = $(window).height() - $("header.mainheader").height();
@@ -19,7 +18,6 @@ $(document).ready(function () {
         var imgsizetab = imgsize - $(".pdp-right").width();
         var carouselmaxsize = overlayHeight - topoffset - $(".gallery-thumbs").outerHeight() - 45;
         var prodsize = $(".pdp-right").width() - 80;
-        var tableft = $(window).width() - $(".pdp-right").width() - 2;
         $("div.main-container").css("height", overlayHeight);
         $("div.main-container").css("top", $("header.mainheader").height());
         $("div.filters-overlay").css("height", overlayHeight);
@@ -33,7 +31,7 @@ $(document).ready(function () {
         $(".products-slide").css("width", prodsize);
         if (windowwidth >= 768) {
             $(".pdp-left .swiper-container").css("width", imgsizetab);
-            $(".pdp-left").css("width", tableft);
+            $(".pdp-left").css("width", "59.8%");
             $(".pdp-left").css("height", overlayHeight - topoffset);
             $(".pdp-right").css("height", overlayHeight);
             $(".pdp-right .swiper-container").css("width", prodsize);

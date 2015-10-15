@@ -171,6 +171,7 @@ input[type=text]:focus {
     position: absolute;
     z-index: 50;
     display: none;
+    float: none;
 }
 
 .filters-inner {
@@ -782,7 +783,7 @@ section.options ul.availability li.hd {
 .gallery-thumbs .swiper-slide { width: 48px !important; }
 .swiper-pagination { display: block; }
 
-@media only screen and (min-device-width : 768px) {
+@media (min-device-width : 768px) {
     .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
     .pdp-left { overflow: hidden; }
     .dock { width: 40%; }
@@ -800,13 +801,15 @@ section.options ul.availability li.hd {
     .main-container {
         float: right;
         width: 59.9%;
+        height: auto !important;
+        border-left: 1px solid #CCC;
     }
     
     .filters-overlay {
         float: left;
         width: 320px;
         display: block !important;
-        border-right: 1px solid #CCC;
+        height: auto !important;
     }
     
     .filters-out {
@@ -819,7 +822,7 @@ section.options ul.availability li.hd {
         -webkit-transform: none;
         position: relative;
         height: 100% !important;
-        overflow-x: none;
+        overflow: auto;
     }
     
     .refinenav { display: none; }
