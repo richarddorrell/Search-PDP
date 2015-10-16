@@ -369,12 +369,19 @@ label {
     display: none;
 }
 
+.overlay {
+    position: absolute;
+    z-index: 100;
+    display: none;
+    overflow: hidden;
+}
+
 .prodinfo .reviews, .products-slide .reviews, .product .reviews {
     background: transparent url("../img/stars.png") no-repeat;
     display: block;
     background-size: contain;
-    height: 20px;
-    width: 150px;
+    height: 15px;
+    width: 118px;
     margin: 0 auto 10px;
     text-align: right;
 }
@@ -383,7 +390,7 @@ label {
     margin: 0 0 10px 0;
 }
 
-.pdp-inner {
+.pdp-inner, .overlay-inner {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #FFF;
@@ -393,13 +400,23 @@ label {
     width: 100%;
 }
 
-.pdp-in {
+.overlay-inner {
+    background-color: #F5F5F5;
+    width: 90%;
+    float: right;
+    box-shadow: 0 0 30px #777;
+    -moz-box-shadow: 0 0 30px #777;
+    -webkit-box-shadow: 0 0 30px #777;
+    overflow-y: auto;
+}
+
+.pdp-in, .overlay-in {
     animation: pdp-in 0.3s forwards;
     -webkit-animation: pdp-in 0.3s forwards;
     -moz-animation: pdp-in 0.3s forwards;
 }
 
-.pdp-out {
+.pdp-out, .overlay-out {
     animation: pdp-out 0.3s forwards;
     -webkit-animation: pdp-out 0.3s forwards;
     -moz-animation: pdp-out 0.3s forwards;
@@ -411,6 +428,16 @@ label {
 }
 
 @-webkit-keyframes pdp-out {
+    0% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); opacity: 1; }
+    100% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%);opacity: 0; }
+}
+
+@-webkit-keyframes overlay-in {
+    0% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); opacity: 1; }
+}
+
+@-webkit-keyframes overlay-out {
     0% { transform: translateX(0%); -webkit-transform: translateX(0%); -moz-transform: translateX(0%); opacity: 1; }
     100% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%);opacity: 0; }
 }
@@ -712,7 +739,7 @@ section.options ul.availability li.hd {
     display: none;
 }
 
-.pdpnav, .refinenav {
+.pdpnav, .refinenav, .overlaynav {
     background-color: #F5F5F5;
     padding: 15px 0;
     border-bottom: 1px solid #CCC;

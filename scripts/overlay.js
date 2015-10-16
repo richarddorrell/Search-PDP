@@ -57,6 +57,15 @@ $(document).ready(function () {
                 $(".flagscolumns").css("display", "block");
                 $(".content .flags").css("display", "none");
             }
+            else if ($("div.product").hasClass("six")) {
+                $("div.product").removeClass("six");
+                $("div.product").addClass("four");
+                $("div.product").removeClass("rows");
+                $("div.prodleft").removeClass("five");
+                $("div.content").removeClass("seven");
+                $(".flagscolumns").css("display", "block");
+                $(".content .flags").css("display", "none");
+            }
         } else if (windowwidth < 768) {
             $(".pdp-left").css("width", windowwidth);
             $(".pdp-left").css("height", "auto");
@@ -138,6 +147,36 @@ $(document).ready(function () {
         if ($("div.refinenav").hasClass("filters-out")) {
             $("div.refinenav").removeClass("filters-out");
             $("div.refinenav").addClass("filters-in");
+        }
+    });
+    
+    /* OVERLAY */    
+    $(".showoverlay").click(function () {
+        $("div.overlay").show();
+        if ($("div.overlay-inner").hasClass("overlay-out")) {
+            $("div.overlay-inner").removeClass("overlay-out");
+            $("div.overlay-inner").addClass("overlay-in");
+            $("body").css("overflow", "hidden");
+        }
+        if (windowwidth >= 768) {
+            $("div.overlay").css("top", $(".pdpnav").outerHeight());
+            $("div.overlay").css("height", overlayHeight - $(".pdpnav").outerHeight());
+            $("div.overlay-inner").css("height", overlayHeight - $(".pdpnav").outerHeight());
+        }
+        else if (windowwidth < 768) {
+            $("div.overlay").css("top", $(".pdp-inner").scrollTop());
+            $("div.overlay").css("height", overlayHeight);
+            $("div.overlay-inner").css("height", overlayHeight);
+            $(".pdp-inner").css("overflow", "none");
+        }
+    });
+    
+    $(".hideoverlay").click(function () {
+        if ($("div.overlay-inner").hasClass("overlay-in")) {
+            $("div.overlay-inner").removeClass("overlay-in");
+            $("div.overlay-inner").addClass("overlay-out");
+            $("body").css("overflow", "auto");
+            $("div.overlay").delay(300).hide(0);
         }
     });
 
