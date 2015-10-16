@@ -783,7 +783,7 @@ section.options ul.availability li.hd {
 .gallery-thumbs .swiper-slide { width: 48px !important; }
 .swiper-pagination { display: block; }
 
-@media (min-device-width : 768px) {
+@media screen and (min-width: 768px) {
     .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
     .pdp-left { overflow: hidden; }
     .dock { width: 40%; }
@@ -803,6 +803,7 @@ section.options ul.availability li.hd {
         width: 59.9%;
         height: auto !important;
         border-left: 1px solid #CCC;
+        overflow-y: auto;
     }
     
     .filters-overlay {
