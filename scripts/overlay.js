@@ -48,6 +48,15 @@ $(document).ready(function () {
                     stickyout();
                 }
             });
+            if ($("div.product").hasClass("twelve")) {
+                $("div.product").removeClass("twelve");
+                $("div.product").addClass("four");
+                $("div.product").removeClass("rows");
+                $("div.prodleft").removeClass("five");
+                $("div.content").removeClass("seven");
+                $(".flagscolumns").css("display", "block");
+                $(".content .flags").css("display", "none");
+            }
         } else if (windowwidth < 768) {
             $(".pdp-left").css("width", windowwidth);
             $(".pdp-left").css("height", "auto");
@@ -63,6 +72,16 @@ $(document).ready(function () {
                     mobstickyout();
                 }
             });
+            
+            if ($("div.product").hasClass("four")) {
+                $("div.product").removeClass("four");
+                $("div.product").addClass("twelve");
+                $("div.product").addClass("rows");
+                $("div.prodleft").addClass("five");
+                $("div.content").addClass("seven");
+                $(".flagscolumns").css("display", "none");
+                $(".content .flags").css("display", "block");
+            }
         }
     }
     
@@ -148,7 +167,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#showpdp").click(function () {
+    $(".showpdp").click(function () {
         $("div.pdp-overlay").show();
         if ($("div.pdp-inner").hasClass("pdp-out")) {
             $("div.pdp-inner").removeClass("pdp-out");
@@ -181,11 +200,10 @@ $(document).ready(function () {
 	});
     
     /* PLP VIEW CHANGE */
-    $("#viewflip").click(function () {
+    $(".viewflip").click(function () {
         if ($("div.product").hasClass("twelve")) {
-            $("div.product").removeClass("twelve");
+            $("div.product").removeClass("twelve rows");
             $("div.product").addClass("six");
-            $("div.product").removeClass("rows");
             $("div.prodleft").removeClass("five");
             $("div.content").removeClass("seven");
             $(".flagscolumns").css("display", "block");
@@ -193,8 +211,7 @@ $(document).ready(function () {
         }
         else if ($("div.product").hasClass("six")) {
             $("div.product").removeClass("six");
-            $("div.product").addClass("twelve");
-            $("div.product").addClass("rows");
+            $("div.product").addClass("twelve rows");
             $("div.prodleft").addClass("five");
             $("div.content").addClass("seven");
             $(".flagscolumns").css("display", "none");

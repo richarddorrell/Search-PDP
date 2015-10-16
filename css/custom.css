@@ -788,9 +788,14 @@ section.options ul.availability li.hd {
     text-align: center;
 }
 
+.tablet { display: none; }
+
 .gallery-thumbs { height: 48px; display: none; }
 .gallery-thumbs .swiper-slide { width: 48px !important; }
 .swiper-pagination { display: block; }
+
+@media screen and (min-width: 550px) and (max-width: 767px) {
+}
 
 @media screen and (min-width: 768px) {
     .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
@@ -839,4 +844,7 @@ section.options ul.availability li.hd {
     
     .filters { display: none; }
     .filterstab { display: block; }
+    
+    .mobile { display: none; }
+    .tablet { display: block; }
 }
