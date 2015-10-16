@@ -106,6 +106,8 @@
 .touch {
     min-width: 48px;
     min-height: 48px;
+    background-size: auto !important;
+    background-position: center !important;
 }
 
 .button:active { 
@@ -154,7 +156,8 @@ input[type=text]:focus {
 .results span { margin: 15px 0; float: left; font-weight: bold; }
 .results span + span { float: right; font-weight: normal; }
 
-.filters { border-bottom: 1px solid #CCC; padding-bottom: 15px; }
+.filters, .filterstab { border-bottom: 1px solid #CCC; padding-bottom: 15px; }
+.filterstab { display: none; }
 
 .product { padding: 15px 0; border-bottom: 1px solid #CCC; display: flex; }
 .product div.prodimg { background: transparent url("../img/prod-img/prod1.jpg") center no-repeat; width: 100%; padding: 50% 0; background-size: contain; }
@@ -715,7 +718,7 @@ section.options ul.availability li.hd {
     border-bottom: 1px solid #CCC;
 }
 
-.pdpnav .left, .refinenav .left {
+.left {
     float: left;
     width: 10px;
     height: 16px;
@@ -733,7 +736,7 @@ section.options ul.availability li.hd {
     width: 100%;
 }
 
-.pdpnav .right {
+.right {
     float: right;
     width: 10px;
     height: 16px;
@@ -777,6 +780,12 @@ section.options ul.availability li.hd {
     display: block;
 	width: 46px;
 	height: 46px;
+}
+
+.pagination {
+    display: block; 
+    float: left;
+    text-align: center;
 }
 
 .gallery-thumbs { height: 48px; display: none; }
@@ -827,4 +836,7 @@ section.options ul.availability li.hd {
     }
     
     .refinenav { display: none; }
+    
+    .filters { display: none; }
+    .filterstab { display: block; }
 }
