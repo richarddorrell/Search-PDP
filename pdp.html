@@ -11,15 +11,19 @@
         <link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.argos.co.uk/m/static/Product/partNumber/9806061.htm">
         <link rel="icon" href="http://www.argos.co.uk/wcsstore/argos/v2/public/img/favicon.ico" type="image/x-icon">
         
+        <link rel="stylesheet" href="css/argos-style.css">
+        <link rel="stylesheet" href="css/argos-style-theme.css"> 
         <link rel="stylesheet" href="css/base.css">
         <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="css/swiper.css">
+        <link rel="stylesheet" href="css/swiper.css"> 
         <link rel="stylesheet" href="http://www.argos.co.uk/wcsstore/argos/en_GB/siteAssets/css/home.css">
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async></script>   
-        <script type="text/javascript" src="scripts/overlay.js" defer></script>              
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>   
+        <script type="text/javascript" src="js/overlay.js"></script>    
+        <script type="text/javascript" src="js/argos-style.js"></script>  
+        <script type="text/javascript" src="js/swiper.jquery.js"></script>             
 
-        <title>Argos test template</title>
+        <title>Argos Vision Prototype - PDP</title>
     </head>
 	
 	<body>
@@ -33,166 +37,201 @@
             </ul>
         </header>
         
-        <div id="pdpcontent">
-            
+        <div class="container-fluid pdpcontent">
             <div class="pdpnav">
-                <div class="container" style="display: flex; align-items: center;">
-                    <a class="left" id="hidepdp"></a>
+                <div style="display: flex; align-items: center;">
+                    <a class="left" href="plp.html"></a>
                     <span class="searchterm">Search: <span>"Leather Sofa"&nbsp;&nbsp;&nbsp;&nbsp;1/207 Results</span></span>
                     <a class="right"></a>
                 </div>
             </div>
-            
-            <div class="pdp-left">               
-                
-                 <!-- Slider main container -->
-                <div class="swiper-container main-swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod1.jpg"/>
+            <div>
+                <div class="row">
+                    <div class="pdp-left"><div class="row"></div></div>
+                    <div class="pdp-right"><div class="row"></div></div>
+                    <div class="left-1" style="overflow: hidden;">    
+                        <!-- Slider main container -->
+                        <div class="swiper-container main-swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod1.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod2.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod3.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod4.jpg"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod2.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod3.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod4.jpg"/>
-                        </div>
-                    </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-                 <div class="swiper-container gallery-thumbs">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod1.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod2.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod3.jpg"/>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/prod-img/prod4.jpg"/>
-                        </div>
-                    </div>
-                </div>
-                <div id="swiperscript"></div>
-
-                <div class="flags">
-                    <span class="flagnew">NEW</span>
-                    <span class="flagonline">ONLINE EXCLUSIVE</span>
-                </div>
-            </div>
-            
-            <div class="pdp-right">
-                <div class="container prodinfo">
-                    <div>
-                        <h1 class="prodtitle columns nine">ColourMatch leather effect tub sofa - Apple Green</h1>
-                        <span class="catno columns three">257/6800</span>
-                    </div>
-                    <div class="twelve">
-                        <div class="reviews">
-                            <span>(0)</span> 
-                        </div>
-                        <div class="mainprice columns six" style="text-align: right;">&pound;148.99</div>
-                        <div class="columns six" style="line-height: 1em;">
-                            <span class="wasprice">was &pound;199.99</span><br/>
-                            <span class="savingprice">SAVE &pound;51.00</span>
-                        </div>
-                    </div>
-                    <div class="credit twelve">Buy now, pay 6 months later with the <strong>Argos Card</strong></div>
-                </div>
-
-
-                <section class="options">
-                    <div class="container">
-                        <h3 class="columns three">Colour:</h3>
-                        <div class="columns nine colours">
-                            <a class="expand" id="showcolours">&nbsp;</a>
-                            <a class="swatch green"><span>Green</span></a>
-                            <a class="swatch red"><span>Red</span></a>
-                            <a class="swatch purple"><span>Purple</span></a>
-                            <a class="swatch blue"><span>Blue</span></a>
-                            <a class="swatch yellow"><span>Yellow</span></a>
-                            <a class="collapse" id="hidecolours">&nbsp;</a>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <h3 class="columns three">Number of seats:</h3>
-                        <div class="columns nine">
-                            <div class="dropdown" style="width: 100%;">
-                                <select style="width: 100%;">
-                                    <option value="dropdown">2-Seater</option>
-                                    <option value="option1">Price: Low to High</option>
-                                    <option value="option2">Price: High to Low</option>
-                                    <option value="option3">Promotions</option>
-                                    <option value="option4">Customer Ratings</option>
-                                </select>
+                        <div class="swiper-container gallery-thumbs">
+                        <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod1.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod2.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod3.jpg"/>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/prod4.jpg"/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container">
-                        <div style="display: flex; clear: both;">
-                            <div class="dropdown" style="width: 60px; margin-right: 15px;">
-                                <select style="width: 100%; background-position: 80% 50%;">
-                                    <option value="dropdown">1</option>
-                                    <option value="option1">2</option>
-                                    <option value="option2">3</option>
-                                    <option value="option3">4</option>
-                                    <option value="option4">5</option>
-                                    <option value="option6">6</option>
-                                    <option value="option7">7</option>
-                                    <option value="option8">8</option>
-                                    <option value="option9">9</option>
-                                </select>
-                            </div>
-                            <a class="button primary atbdock" style="text-align: center;">Add to basket</a>
-                            <a class="button wishlist touch"><span></span></a>
+                        <div id="swiperscript">
+                            <script> 
+                                var mainSwiper = new Swiper(".main-swiper", { 
+                                    slidesPerView: 1, 
+                                    pagination: ".swiper-pagination" }); 
+                                var swiperThumbs = new Swiper(".gallery-thumbs", { 
+                                    spaceBetween: 10, 
+                                    touchRatio: 0.2, 
+                                    slideToClickedSlide: true }); 
+                                mainSwiper.params.control = swiperThumbs; 
+                                swiperThumbs.params.control = mainSwiper; 
+                            </script>
                         </div>
-                        <a class="showoverlay" style="display: block;">
-                            <div class="bubble">
-                                <h3>How can I get it?</h3>
-                                <ul class="availability">
-                                    <li class="sc">Available for store collection</li>
-                                    <li class="hd">Available for home delivery</li>
-                                </ul>
-                            </div>
-                        </a>
-                        
+
+                        <div class="flags">
+                            <span class="flagnew">NEW</span>
+                            <span class="flagonline">ONLINE EXCLUSIVE</span>
+                        </div>
                     </div>
-                </section>
-                <div class="moreinfo">
-                    <div class="container twelve linkbar">
-                        <h3><a>Delivery and returns</a></h3>
-                    </div>
-                    <div class="container twelve" style="border-bottom: 1px solid #CCC;">
+                    <div class="col-xs-12 left-2">
                         <h3>About the product</h3>
-                        <ul>
-                            <li>Durable hardwood frame to survive family life.</li>
-                            <li>Leather effect upholstery for that little touch of luxury.</li>
-                            <li>Removable cushions for hassle-free cleaning.</li>
-                            <li>All Colourmatch products work perfectly together for a coordinated look.</li>
-                            <li>Deep foam cushions for optimum comfort.</li>
-                        </ul>
+                            <ul>
+                                <li>Durable hardwood frame to survive family life.</li>
+                                <li>Leather effect upholstery for that little touch of luxury.</li>
+                                <li>Removable cushions for hassle-free cleaning.</li>
+                                <li>All Colourmatch products work perfectly together for a coordinated look.</li>
+                                <li>Deep foam cushions for optimum comfort.</li>
+                            </ul>
                     </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Specification</a></h3>
+                    <div class="col-xs-12 left-3">
+                        <div class="linkbar">
+                            <h3><a>Full Description</a></h3>
+                        </div>
+                        <div class="linkbar">
+                            <h3><a>Q&amp;A</a></h3>
+                        </div>
+                        <div class="linkbar">
+                            <h3><a>Finance details</a></h3>
+                        </div>
                     </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Full Description</a></h3>
+                    <div class="col-xs-12 right-1">
+                        <div class="prodinfo">
+                            <div>
+                                <h1 class="prodtitle">ColourMatch leather effect tub sofa - Apple Green</h1>
+                                <span class="catno">257/6800</span>
+                            </div>
+                            <div class="reviews">
+                                <span>(0)</span> 
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 mainprice" style="text-align: right;">&pound;148.99</div>
+                                <div class="col-xs-6 subprices">
+                                    <span class="wasprice">was &pound;199.99</span><br/>
+                                    <span class="savingprice">SAVE &pound;51.00</span>
+                                </div>
+                            </div>
+                            <div class="credit col-xs-12">Buy now, pay 6 months later with the <strong>Argos Card</strong></div>
+                        </div>
+                        <section class="options">
+                            <div class="row">
+                                <h3 class="col-xs-3 col-lg-2">Colour:</h3>
+                                <div class="col-xs-9 col-lg-10 colours">
+                                    <a class="swatch expand" id="showcolours">&nbsp;</a>
+                                    <a class="swatch green"><span>Green</span></a>
+                                    <a class="swatch red"><span>Red</span></a>
+                                    <a class="swatch purple"><span>Purple</span></a>
+                                    <a class="swatch blue"><span>Blue</span></a>
+                                    <a class="swatch yellow"><span>Yellow</span></a>
+                                    <a class="swatch aqua"><span>Aqua</span></a>
+                                    <a class="swatch fuchsia"><span>Fuchsia</span></a>
+                                    <a class="swatch chocolate"><span>Chocolate</span></a>
+                                    <a class="swatch darkslategray"><span>Darkslategray</span></a>
+                                    <a class="swatch darkolivegreen"><span>Darkolivegreen</span></a>
+                                    <a class="collapse" id="hidecolours">&nbsp;</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <h3 class="col-xs-3 col-lg-2">Number of seats:</h3>
+                                <div class="col-xs-9 col-lg-10">
+                                    <div class="dropdown" style="width: 100%;">
+                                        <select style="width: 100%;">
+                                            <option value="dropdown">2-Seater</option>
+                                            <option value="option1">Price: Low to High</option>
+                                            <option value="option2">Price: High to Low</option>
+                                                             <option value="option3">Promotions</option>
+                                            <option value="option4">Customer Ratings</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex; clear: both;">
+                                <div class="dropdown" style="width: 60px; margin-right: 15px;">
+                                    <select style="width: 100%; background-position: 80% 50%;">
+                                        <option value="dropdown">1</option>
+                                        <option value="option1">2</option>
+                                        <option value="option2">3</option>
+                                        <option value="option3">4</option>
+                                        <option value="option4">5</option>
+                                        <option value="option6">6</option>
+                                        <option value="option7">7</option>
+                                        <option value="option8">8</option>
+                                        <option value="option9">9</option>
+                                    </select>
+                                </div>
+                                <a class="btn btn-primary touch field" style="text-align: center;">Add to basket</a>
+                                <a class="btn btn-default wishlist touch field"><span></span></a>
+                            </div>
+                            <a class="showoverlay" style="display: block;">
+                                <div class="bubble">
+                                    <h3>How can I get it?</h3>
+                                    <ul class="availability">
+                                        <li class="sc">Available for store collection</li>
+                                        <li class="hd">Available for home delivery</li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </section>
+                        <div class="linkbar">
+                            <h3><a>Delivery and returns</a></h3>
+                        </div>
                     </div>
-                    <div class="container twelve linkbar">
-                        <h3><a>Q&amp;A</a></h3>
+                    <div class="col-xs-12 right-2">
+                        <div class="linkbar">
+                            <h3><a>Specification</a></h3>
+                        </div>
                     </div>
-                    <div class="container twelve tabbox">
+                    <div class="col-xs-12 right-3">
                         <h3>Customer reviews</h3>
                         <div class="reviews">
                             <span>Overall rating 3.7</span>
@@ -215,191 +254,464 @@
                             </div>
                         </div>
                     </div>
-
-                        <!-- Slider main container -->
-                    <div class="container tabbox nolink">
-                        <h3>Special offers</h3>
-                        <div class="swiper-container specialoffers-container">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper specialoffers-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Get a Half Price Colourmach Tub Chair when purchased with selected COlourmatch Sofas.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>Get a Half Price Colourmach Tub Chair when purchased with selected COlourmatch Sofas.</div>
-                                </div>
-                                <div class="swiper-slide specialoffers-slide">
-                                    <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
-                                </div>
+                    <h4 class="moduletitle">Special offers</h4>
+                    <div class="swiper-container specialoffers-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper specialoffers-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
                             </div>
-                            <!-- If we need pagination -->
-                            <div class="specialoffers-pagination"></div>
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>Get a Half Price Colourmach Tub Chair when purchased with selected Colourmatch Sofas.</div>
+                            </div>
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
+                            </div>
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>Buy a complete colourmatch furniture set and get a free colourmatch rug.</div>
+                            </div>
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>Get a Half Price Colourmach Tub Chair when purchased with selected Colourmatch Sofas.</div>
+                            </div>
+                            <div class="swiper-slide specialoffers-slide">
+                                <div>10% discount when you buy 3 or more Colourmatch items in the same order.</div>
+                            </div>
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="specialoffers-pagination">
+                            <style>
+                                .specialoffers-container { 
+                                    width: 100%; 
+                                    height: auto; 
+                                } 
+                            </style> 
+                            <script> 
+                                var soswiper = new Swiper(".specialoffers-container", { 
+                                    slidesPerView: 5, 
+                                    centeredSlides: true,
+                                    breakpoints: { 
+                                        1200: { 
+                                            slidesPerView: 5 
+                                        }, 
+                                        992: { 
+                                            slidesPerView: 3 
+                                        }, 
+                                        768: { 
+                                            slidesPerView: 3 
+                                        }, 
+                                        500: { 
+                                            slidesPerView: 1 
+                                        } 
+                                    } 
+                                }); 
+                            </script>
                         </div>
                     </div>
                     <div id="soscript"></div>
-
-                    <div class="container twelve linkbar">
-                        <h3><a>Finance details</a></h3>
-                    </div>
-
-                    <!-- Slider main container -->
-                    <div class="container tabbox nolink">
-                        <h3>Customers who viewed this went on to buy</h3>
-                        <div class="swiper-container products-container prod-one">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper products-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span> 
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
+                    <h4 class="moduletitle">Customers who viewed this went on to buy</h3>
+                    <div class="swiper-container products-container prod-one">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper products-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
                                     </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod2.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
                                     </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod3.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
+                                    <div class="price">&pound;448.99</div>       
                                 </div>
                             </div>
-                            <!-- If we need pagination -->
-                            <div class="prod-one-pagination"></div>
-                        </div>
-                    </div>
-                    <div id="viewedslider"></div>
-
-                        <!-- Slider main container -->
-                    <div class="container tabbox nolink">
-                        <h3>Frequently bought together with this item</h3>
-                        <div class="swiper-container products-container prod-two">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper products-wrapper">
-                                <!-- Slides -->
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
                                     </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod2.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span> (0)
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
                                     </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod3.jpg"/>
-                                        <h4>ColourMatch fabric ottoman - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span></span>
-                                        </div>
-                                        <div class="price">&pound;72.99</div>            
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-slide">
-                                    <div class="otherprod">
-                                        <img src="img/prod-img/prod1.jpg"/>
-                                        <h4>ColourMatch fabric tub chair - Apple green.</h4>
-                                        <div class="reviews">
-                                            <span>(0)</span>
-                                        </div>
-                                        <div class="price">&pound;98.99</div>       
-                                    </div>
+                                    <div class="price">&pound;215.99</div>            
                                 </div>
                             </div>
-                            <!-- If we need pagination -->
-                            <div class="prod-two-pagination"></div>
-                        </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>                        </div>
+                        <!-- If we need pagination -->
+                        <div class="prod-one-pagination"></div>
                     </div>
-                    <div id="freqslider"></div>
-                </div>   
+                    <div id="viewedslider">
+                        <script> 
+                            var viewedswiper = new Swiper(".prod-one", { 
+                                pagination: ".prod-one-pagination", 
+                                paginationClickable: true, 
+                                loop: true, 
+                                slidesPerView: 5, 
+                                centeredSlides: true, 
+                                breakpoints: { 
+                                    1200: { 
+                                        slidesPerView: 5 
+                                    }, 
+                                    992: { 
+                                        slidesPerView: 3 
+                                    }, 
+                                    768: { 
+                                        slidesPerView: 3 
+                                    }, 
+                                    500: { 
+                                        slidesPerView: 1 
+                                    } 
+                                } 
+                            }); 
+                        </script>
+                    </div>
+                    <h4 class="moduletitle">Frequently bought together with this item</h3>
+                    <div class="swiper-container products-container prod-two">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper products-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/eton.jpg"/>
+                                    </div>
+                                    <h4>Heart of House Eton Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span> 
+                                    </div>
+                                    <div class="price">&pound;448.99</div>       
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/tabitha.jpg"/>
+                                    </div>
+                                    <h4>Tabitha Regular Fabric Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;215.99</div>            
+                                </div>
+                            </div>
+                            <div class="swiper-slide products-slide">
+                                <div class="otherprod">
+                                    <div class="cardify">
+                                        <img src="img/prod-img/bradley.jpg"/>
+                                    </div>
+                                    <h4>Bradley Regular Fabric Recliner Sofa</h4>
+                                    <div class="reviews">
+                                        <span>(0)</span>
+                                    </div>
+                                    <div class="price">&pound;378.99</div>            
+                                </div>
+                            </div>                        </div>
+                        <!-- If we need pagination -->
+                        <div class="prod-two-pagination"></div>
+                    </div>
+                    <div id="freqslider">
+                        <script> 
+                            var freqswiper = new Swiper(".prod-two", { 
+                                loop: true, 
+                                pagination: ".prod-two-pagination", 
+                                paginationClickable: true, 
+                                loop: true, 
+                                slidesPerView: 5, 
+                                centeredSlides: true, 
+                                breakpoints: { 
+                                    1200: {
+                                        slidesPerView: 5 
+                                    },
+                                    992: { 
+                                        slidesPerView: 3 
+                                    }, 
+                                    768: { 
+                                        slidesPerView: 3 
+                                    }, 
+                                    500: { 
+                                        slidesPerView: 1 
+                                    } 
+                                } 
+                            }); 
+                        </script>
+                    </div>
+                </div>
+            
                 
                 <div class="dock">
                     <div class="container">
-                        <div class="columns six">
+                        <div class="col-xs-6">
                             <h4 style="margin: 0;"><small>ColourMatch Leather Effect Tub Sofa - Apple Green - <span class="price" style="font-weight: normal;">&pound;72.99</span></small></h4>        
                         </div>
-                        <div class="columns six">
-                            <a class="button primary" style="width: 100%">Add to Basket</a>
+                        <div class="col-xs-6">
+                            <a class="btn btn-primary" style="width: 100%">Add to Basket</a>
                         </div>
                     </div>
                 </div>
-                        
-                <div class="overlay">
-                    <div class="overlay-inner overlay-out">
-                        <div class="overlaynav">
-                            <div class="container" style="display: flex;">
-                                <a class="left hideoverlay" style="text-indent: 30px; width: auto;">Back to your results</a>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <h3>How can I get it?</h3>
-                            <ul class="availability">
-                                <li class="sc">Available for store collection</li>
-                                <p>Tell us where you are or <a>sign in</a> and we can tell you which items are in stock at your local store!</p>
-                                <input type="text" value="Postcode or town name"><a class="button field">Go</a>
-                                <hr/>
-                                <li class="hd">Available for home delivery</li>
-                                <p>Tell us where you want deliveries or <a>sign in</a> and we can tell you if we can delivery to you.</p>
-                                <input type="text" value="Postcode"><a class="button field">Go</a>
-                            </ul>
-                            <div class="bubble">These settings cover the whole site so you only need to do this once to see availability for every item we sell!</div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            
-            
                 
                 <div class="backtotop">
-                	<a id="totoptab"></a>
+                    <a id="totop"></a>
                 </div>
-            
-            
-            
-            <script type="text/javascript" src="scripts/swiper.jquery.js"></script>
+
+            </div>   
+                        
+            <div class="overlay">
+                <div class="overlay-inner overlay-out">
+                    <div class="overlaynav">
+                        <div class="container" style="display: flex;">
+                            <a class="left hideoverlay" style="text-indent: 30px; width: auto;">Back to your results</a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h3>How can I get it?</h3>
+                        <ul class="availability">
+                            <li class="sc">Available for store collection</li>
+                            <p>Tell us where you are or <a>sign in</a> and we can tell you which items are in stock at your local store!</p>
+                            <input type="text" value="Postcode or town name"><a class="btn btn-default field">Go</a>
+                            <hr/>
+                            <li class="hd">Available for home delivery</li>
+                            <p>Tell us where you want deliveries or <a>sign in</a> and we can tell you if we can delivery to you.</p>
+                            <input type="text" value="Postcode"><a class="btn btn-default field">Go</a>
+                        </ul>
+                        <div class="bubble">These settings cover the whole site so you only need to do this once to see availability for every item we sell!</div>
+                    </div>
+                </div>
+            </div>
             
         </div>
+            
+    </div>
         
-    <footer></footer>
+    <footer></footer> 
         
-    </body>
+</body>
 </html>

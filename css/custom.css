@@ -1,38 +1,63 @@
-.eight, .eleven, .five, .four, .nine, .one, .seven, .ten, .three, .twelve, .two, .six {
-	margin-right: 4.8543%;
-	margin-left: 0;
-	float: left;
+body {
+    background-color: #F5F5F5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.one { width: 3.8834% }
-.two { width: 12.6211% }
-.three { width: 21.3588% }
-.four {	width: 30.0963% }
-.five {	width: 38.8342% }
-.six { width: 47.5719%; }
-.seven { width: 56.3096% }
-.eight { width: 65.0473% }
-.nine { width: 73.785% }
-.ten { width: 82.5227% }
-.eleven { width: 91.2604% }
-.twelve { width: 100% }
+/* FONTS */
 
-.columns:last-child { margin-right: 0; }
+    .product h2, .pdpcontent h1 {
+        font-size: 15px;
+        font-family: ArgosNormal;
+        margin: 10px 0;
+        font-weight: normal;
+        float: left;
+        height: 34px;
+        overflow: hidden;
+        display: block;
+    }
+    .product .price {
+        font-size: 20px;
+        font-family: ArgosCondensed;
+    }
+    .product .wasprice {
+        font-size: 13px;
+        color: #777;
+        font-family: ArgosNormal;
+    }
+    .product .saving {
+        font-size: 16px;
+        color: #EE3124;
+        text-transform: uppercase;
+        font-family: ArgosCondensed;
+        display: block;
+        min-height: 22px;
+    }
+    .mainprice { 
+        font-size: 30px; 
+        font-family: ArgosCondensed;
+        padding-right: 5px;
+    } 
+    .subprices {
+        padding-left: 5px;
+        line-height: 18px;
+    }
 
-*,
-:after,
-:before {
-    box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box
-}
+
+.catno { font-size: 12px; margin: 10px 0; font-weight: normal; text-align: right; float: right; }
 
 .fulfilment-tab { width: 45.5% }
 
 .main-container {
-    overflow-y: scroll;
-    overflow-x: hidden;
     position: relative;
+    top: 61px;
+}
+
+.pdpcontent .container {
+    overflow: hidden;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    background-color: #F5F5F5;
 }
 
 .view p { 
@@ -58,7 +83,6 @@
   height: 48px;
   display: inline-block;
   float: left;
-  font-family: argoscondensed_extrabold; 
   color: #333; 
   text-transform: uppercase; 
   padding: 0 10px; 
@@ -81,10 +105,13 @@
 .fullwidth {
     width: 100%;
     text-align: center; 
-    padding: 0 }
+    padding-left: 0;
+    padding-right: 0;
+}
 
 .secondary { 
-  color: #F7941D; }
+  color: #F7941D; 
+}
 
 .wishlist { 
     padding: 0; 
@@ -117,13 +144,14 @@
 a.field {
   height: 48px;
   line-height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 input[type=text], select {
   height: 48px;
   border: 1px solid #CCC;
   border-bottom: 3px solid #CCC;
-  font-family: argosbook;
   padding: 0 10px;
   font-size: 16px; 
   box-sizing: border-box; 
@@ -131,6 +159,7 @@ input[type=text], select {
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
+    font-family: ArgosNormal;
   }
 
 input[type=text]:focus {
@@ -152,36 +181,41 @@ input[type=text]:focus {
 .dropdown option {
   padding: 10px; }
 
-.results { font-family: argosbook; }
-.results span { margin: 15px 0; float: left; font-weight: bold; }
-.results span + span { float: right; font-weight: normal; }
+.results span { margin: 15px 0; font-weight: 600; font-size: 16px; font-family: ArgosNormal; }
+.results span + span { text-align: right; font-weight: normal; }
 
-.filters, .filterstab { border-bottom: 1px solid #CCC; padding-bottom: 15px; }
-.filterstab { display: none; }
+.filters { padding: 0 0 15px; }
 
-.product { padding: 15px 0; border-bottom: 1px solid #CCC; display: flex; }
+.product { padding: 0 0 15px; }
 .product div.prodimg { background: transparent url("../img/prod-img/prod1.jpg") center no-repeat; width: 100%; padding: 50% 0; background-size: contain; }
-.product span.mainprice { float: left; margin-right: 5px; }
+.product div.prodimg.aston { background-image: url("../img/prod-img/aston.jpg"); }
+.product div.prodimg.tabitha { background-image: url("../img/prod-img/tabitha.jpg"); }
+.product div.prodimg.bradley { background-image: url("../img/prod-img/bradley.jpg"); }
+.product div.prodimg.eton { background-image: url("../img/prod-img/eton.jpg"); }
+.product div.prodimg.hygena { background-image: url("../img/prod-img/hygena.jpg"); }
+.product span.mainprice { margin-right: 5px; }
 .product .otherpricing { line-height: 0.9em; padding-top: 1px; }
+.productrow { display: table; width: 100%; }
+.tablet .productrow, .mobile .product { border-bottom: 1px solid #CCC; }
 
-.product .content { 
+.product .prodright, .product .specs { 
 	display: flex;
   	flex-direction: column;
   	justify-content: center; }
 
 .filters-overlay {
-    width: 100%;
     position: absolute;
     z-index: 50;
     display: none;
     float: none;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
 }
 
 .filters-inner {
-    overflow-y: scroll;
     width: 100%;
-    position: fixed;
-    background-color: #FFF;
      transform: translateY(100%);
     -webkit-transform: translateY(100%);
     -moz-transform: translateY(100%);
@@ -230,11 +264,9 @@ input[type=text]:focus {
 
 .filters-overlay .accordion {
     border: 1px solid #CCC;
-    margin: 15px 0;
 }
 
 div.stars {
-    width: 270px;
     display: table;
     margin: 0 auto;
 }
@@ -243,7 +275,7 @@ input.star { display: none; }
 
 label.star {
     float: right;
-    padding: 20px;
+    padding: 14px;
     margin: 15px 7px;
     background: transparent url("../img/starempty.svg") no-repeat;
     background-size: contain;
@@ -271,9 +303,7 @@ label.star:before {
 }
 
 .accordion .colours {
-  padding: 15px;
-  display: table;
-  width: 100%;
+  padding: 15px 0;
 }
  
 /*----- Section Titles -----*/
@@ -285,11 +315,9 @@ label.star:before {
     display:inline-block;
     border-bottom:1px solid #ccc;
     transition:all linear 0.15s;
-    font-family: argosbook;
     font-weight: normal;
     /* Type */
     color:#333;
-    font-family: argosbook;
     text-decoration: none;
 }
 
@@ -348,7 +376,7 @@ input[type=checkbox] + label {
   background: url("../img/check_off.png") no-repeat;
     background-size: contain;
     margin: 10px 10px 10px 0;
-  font: 14px argosbook; }
+  font: 14px ArgosNormal; }
 
 input[type=checkbox]:checked + label {
   background: url("../img/check_on.png") no-repeat; 
@@ -367,6 +395,8 @@ label {
     position: absolute;
     z-index: 50;  
     display: none;
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .overlay {
@@ -374,6 +404,7 @@ label {
     z-index: 100;
     display: none;
     overflow: hidden;
+    right: 0px;
 }
 
 .prodinfo .reviews, .products-slide .reviews, .product .reviews {
@@ -384,30 +415,26 @@ label {
     width: 118px;
     margin: 0 auto 10px;
     text-align: right;
+    clear: both;
 }
 
 .product .reviews {
     margin: 0 0 10px 0;
 }
 
-.pdp-inner, .overlay-inner {
-    overflow-y: scroll;
+.overlay-inner {
+    overflow-y: auto;
     overflow-x: hidden;
-    background-color: #FFF;
+    background-color: #F5F5F5;
     transform: translateX(100%);
     -webkit-transform: translateX(100%);  
     -moz-transform: translateX(100%);
-    width: 100%;
-}
-
-.overlay-inner {
     background-color: #F5F5F5;
     width: 90%;
     float: right;
-    box-shadow: 0 0 30px #777;
-    -moz-box-shadow: 0 0 30px #777;
-    -webkit-box-shadow: 0 0 30px #777;
-    overflow-y: auto;
+    box-shadow: 0 0 70px #000;
+    -moz-box-shadow: 0 0 70px #000;
+    -webkit-box-shadow: 0 0 70px #000;
 }
 
 .pdp-in, .overlay-in {
@@ -442,7 +469,10 @@ label {
     100% { transform: translateX(100%); -webkit-transform: translateX(100%); -moz-transform: translateX(100%);opacity: 0; }
 }
 
-#pdpcontent {
+.pdpcontent {
+    background-color: #FFF;
+    position: relative;
+    top: 60px;
 }
 
 .flags span {
@@ -460,14 +490,12 @@ label {
     background-color: #f7941d;
 }
 
-#pdpcontent .flags {
+.pdpcontent .flags {
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 23px;
+    left: 100px;
     z-index: 100;
 }
-
-.prodinfo { z-index: 10; }
 
 .prodinfo > div { clear: both; }
 
@@ -486,7 +514,6 @@ section.options .container {
 section.options h3 {
     margin-bottom: 0;
     margin-top: 0;
-    font-size: 1em;
     height: 48px;  
     display: flex;
     flex-direction: column;
@@ -534,19 +561,18 @@ section.options .dropdown, section.options .button { margin-bottom: 15px; }
     position: absolute;
     display: none;
     top: 5px;
-    left: 5px;
 }
 
 .product .swatch {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     margin-right: 2px;
     margin-bottom: 0;
 }
 
 .swatch span {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     margin: 4px;
     display: block;
 }
@@ -565,10 +591,7 @@ section.options .dropdown, section.options .button { margin-bottom: 15px; }
 section.options .expand, section.options .collapse {
     float: right;
     background: #FFF url("../img/chevron-down.png") no-repeat 50% 50%;
-    margin-right: 0;
-    height: 46px;
-    width: 46px;
-    border: 1px solid #CCC;
+    margin-right: 15px;
 }
 
 section.options .collapse {
@@ -581,15 +604,21 @@ section.options .collapse {
 .swatch.purple span { background-color: #913493; }
 .swatch.blue span { background-color: #3777bc; }
 .swatch.yellow span { background-color: #ffe500; }
+.swatch.aqua span { background-color: aqua; }
+.swatch.fuchsia span { background-color: fuchsia; }
+.swatch.chocolate span { background-color: chocolate; }
+.swatch.darkslategray span { background-color: darkslategray; }
+.swatch.darkolivegreen span { background-color: darkolivegreen; }
 
 a.swatch:hover, a.swatch:focus, a.swatch:active {
 	border-color: #f7941d;
 }
 
 section.options .colours {
-    height: 63px;
+    height: 61px;
     overflow: hidden;
     transition: all .2s ease-in;
+    padding-right: 0;
 }
 
 section.options ul.availability {
@@ -615,25 +644,42 @@ section.options ul.availability li.hd {
     background: transparent url("../img/hd.png") no-repeat 0 50%;
 }
 
-#pdpcontent .linkbar {
+.pdpcontent .linkbar {
     background: transparent url("../img/chevron.png") no-repeat 95% 50%;
     height: 48px;
 }
 
-#pdpcontent .linkbar h3 {
+.pdpcontent .linkbar h3 {
     margin: 0;
     line-height: 48px;
 }
 
 
-#pdpcontent .linkbar h3 a {
+.pdpcontent .linkbar h3 a {
     width: 100%;
     display: block;
 }
 
-#pdpcontent h3 {
+.pdpcontent h3 {
     font-size: 16px;
 }
+
+.pdpcontent h4.moduletitle {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 20px 25px 20px;
+    background-color: #E5E5E5;
+    clear: both;
+    font-size: 20px;
+    color: #333;
+    border-bottom: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+  font-family: ArgosCondensed;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.moreinfo { background-color: #F5F5F5; }
 
 .moreinfo .container {
     border-bottom: 1px solid #CCC;
@@ -705,8 +751,29 @@ section.options ul.availability li.hd {
     color: #FFF;
 }
 
-.products-container {
+.products-container, .specialoffers-container {
     margin-bottom: 15px !important;
+    margin-top: -23px !important;
+}
+
+.swiper-container {
+    width: 80% !important;
+}
+
+.cardify {
+    background-color: #FFF;
+    display: block;
+    border: 1px solid #dbd9d9;
+    margin: 0 15px;
+    padding: 15px;
+}
+
+.product .cardify {
+    padding: 15px 0;
+}
+
+.gallery-thumbs .cardify {
+    padding: 5px;
 }
 
 .otherprod img {
@@ -715,9 +782,13 @@ section.options ul.availability li.hd {
 
 .otherprod h4 {
     clear: both;
-    margin: 0 auto 10px;
+    margin: 10px auto 10px;
     text-align: center;
     width: 90%;
+    color: #565656;
+    font-size: 14px;
+    line-height: 1.5em;
+    height: 42px;
 }
 
 .otherprod {
@@ -725,7 +796,12 @@ section.options ul.availability li.hd {
     width: 100%;
 }
 
-.options .primary {
+.otherprod .price {
+    font-size: 16px;
+    color: #565656;
+}
+
+.options .btn-primary {
     flex-grow: 1;    
 }
 
@@ -772,11 +848,6 @@ section.options ul.availability li.hd {
     background-size: contain;
 }
 
-.pdp-left {
-    position: relative;
-    float: left;
-}
-
 .slideme {
     width: 80%;
     height: 100%;
@@ -790,8 +861,8 @@ section.options ul.availability li.hd {
     margin: 15px auto;
 }
 
-.backtotop, .mobbacktotop {
-	position: absolute;
+.backtotop {
+	position: fixed;
 	bottom: 15px;
 	right: 15px;
 	background: #FFF url("../img/chevron-up.png") no-repeat 50% 50%;
@@ -803,7 +874,7 @@ section.options ul.availability li.hd {
     display: none;
 }
 
-.backtotop a, .mobbacktotop a {
+.backtotop a {
     display: block;
 	width: 46px;
 	height: 46px;
@@ -813,6 +884,7 @@ section.options ul.availability li.hd {
     display: block; 
     float: left;
     text-align: center;
+    margin:  0;
 }
 
 .tablet { display: none; }
@@ -820,38 +892,45 @@ section.options ul.availability li.hd {
 .gallery-thumbs { height: 48px; display: none; }
 .gallery-thumbs .swiper-slide { width: 48px !important; }
 .swiper-pagination { display: block; }
+    
+.viewflip {
+    width: 100%;
+}
 
-@media screen and (min-width: 550px) and (max-width: 767px) {
+.left-1 {
+    position: relative;
+}
+
+@media screen and (max-width: 450px) {
+    .product.col-xs-6 .cardify {
+        margin: 0 -1px;
+        border-bottom: 0px;
+    }
+    .product.col-xs-6 {
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
-    .pdp-right { float: right; width: 40%; border-left: 1px solid #CCC; overflow-x: hidden; overflow-y: scroll; }
-    .pdp-left { overflow: hidden; }
+    .pdp-right { border-left: 1px solid #CCC; }
     .dock { width: 40%; }
-	.moreinfo { background-color: #F5F5F5; padding: 0 15px 15px; display: table; }
+	.moreinfo { padding: 0 15px 15px; display: table; }
 	.moreinfo .container { border-bottom: none; }
 	.moreinfo .linkbar { background: #FFF url("../img/chevron.png") no-repeat 95% 50% !important; border: 1px solid #CCC; margin: 15px 0 0 0; }
-	.tabbox { background: #FFF url("../img/chevron.png") no-repeat 95% 20px !important; border: 1px solid #CCC !important; margin: 15px 0 0 0; overflow: hidden; float: left; }
+	.tabbox { background: #FFF url("../img/chevron.png") no-repeat 95% 20px !important; !important; margin: 15px 0 0 0; overflow: hidden; clear: both; border-top: 1px solid #CCC; border-bottom: 1px solid #CCC; }
 	.tabbox.nolink { background-image: none !important; }
-    #pdpcontent { position: fixed; }
     nav.pagination { position: absolute; bottom: 0; z-index: 100; }
     .gallery-thumbs { display: block; }
     .swiper-pagination { display: none; }
-    .pdp-inner { position: fixed; }
-    
-    .main-container {
-        float: right;
-        width: 59.9%;
-        height: auto !important;
-        border-left: 1px solid #CCC;
-        overflow-y: auto;
-    }
+    .product { padding: 0 0 30px; }
     
     .filters-overlay {
-        float: left;
-        width: 320px;
         display: block !important;
+        position: relative;
         height: auto !important;
+        float: left;
+        top: 15px;
+        overflow: hidden;
     }
     
     .filters-out {
@@ -863,15 +942,32 @@ section.options ul.availability li.hd {
         transform: none;
         -webkit-transform: none;
         position: relative;
-        height: 100% !important;
-        overflow: auto;
+        height: auto !important;
+        overflow: none;
+    }
+    
+    .filters .dropdown, .filterstab .dropdown {
+        margin-bottom: 15px;
+    }
+    
+    .viewflip {
+        width: auto;
+        margin-left: 15px;
     }
     
     .refinenav { display: none; }
     
-    .filters { display: none; }
-    .filterstab { display: block; }
-    
     .mobile { display: none; }
     .tablet { display: block; }
+    
+    .pdpcontent .swatch { width: 45px !important; }
+    .pdpcontent .swatch span { width: 35px; }
+}
+@media screen and (min-width: 990px) {
+    .pdpcontent .swatch { width: 48px !important; }
+    .pdpcontent .swatch span { width: 38px; }
+}
+@media screen and (min-width: 1200px) {
+    .pdpcontent .swatch { width: 47px !important; }
+    .pdpcontent .swatch span { width: 37px; }
 }

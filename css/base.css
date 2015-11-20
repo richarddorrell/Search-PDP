@@ -1,149 +1,13 @@
 html { height: 100%; width: 100%; }
 
-@font-face {
-	font-family: argosbold_italic;
-	src: url(../fonts/argos-bolditalic-webfont.eot);
-	src: url(../fonts/argos-bolditalic-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-bolditalic-webfont.woff) format("woff"), url(../fonts/argos-bolditalic-webfont.ttf) format("truetype"), url(../fonts/argos-bolditalic-webfont.svg#argosbold_italic) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosbook;
-	src: url(../fonts/argos-book-webfont.eot);
-	src: url(../fonts/argos-book-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-book-webfont.woff) format("woff"), url(../fonts/argos-book-webfont.ttf) format("truetype"), url(../fonts/argos-book-webfont.svg#argosbook) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argoscompressed_bold;
-	src: url(../fonts/argos-compressedbold-webfont.eot);
-	src: url(../fonts/argos-compressedbold-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-compressedbold-webfont.woff) format("woff"), url(../fonts/argos-compressedbold-webfont.ttf) format("truetype"), url(../fonts/argos-compressedbold-webfont.svg#argoscompressed_bold) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosultralight_italic;
-	src: url(../fonts/argos-ultralightitalic-webfont.eot);
-	src: url(../fonts/argos-ultralightitalic-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-ultralightitalic-webfont.woff) format("woff"), url(../fonts/argos-ultralightitalic-webfont.ttf) format("truetype"), url(../fonts/argos-ultralightitalic-webfont.svg#argosultralight_italic) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosbook_italic;
-	src: url(../fonts/argos-bookitalic-webfont.eot);
-	src: url(../fonts/argos-bookitalic-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-bookitalic-webfont.woff) format("woff"), url(../fonts/argos-bookitalic-webfont.ttf) format("truetype"), url(../fonts/argos-bookitalic-webfont.svg#argosbook_italic) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosheavy_italic;
-	src: url(../fonts/argos-heavyitalic-webfont.eot);
-	src: url(../fonts/argos-heavyitalic-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-heavyitalic-webfont.woff) format("woff"), url(../fonts/argos-heavyitalic-webfont.ttf) format("truetype"), url(../fonts/argos-heavyitalic-webfont.svg#argosheavy_italic) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosultralight;
-	src: url(../fonts/argos-ultralight-webfont.eot);
-	src: url(../fonts/argos-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-ultralight-webfont.woff) format("woff"), url(../fonts/argos-ultralight-webfont.ttf) format("truetype"), url(../fonts/argos-ultralight-webfont.svg#argosultralight) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosheavy;
-	src: url(../fonts/argos-heavy-webfont.eot);
-	src: url(../fonts/argos-heavy-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-heavy-webfont.woff) format("woff"), url(../fonts/argos-heavy-webfont.ttf) format("truetype"), url(../fonts/argos-heavy-webfont.svg#argosheavy) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argosbold;
-	src: url(../fonts/argos-bold-webfont.eot);
-	src: url(../fonts/argos-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-bold-webfont.woff) format("woff"), url(../fonts/argos-bold-webfont.ttf) format("truetype"), url(../fonts/argos-bold-webfont.svg#argosbold) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argoscondensed_book;
-	src: url(../fonts/argos-condensedbook-webfont.eot);
-	src: url(../fonts/argos-condensedbook-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-condensedbook-webfont.woff) format("woff"), url(../fonts/argos-condensedbook-webfont.ttf) format("truetype"), url(../fonts/argos-condensedbook-webfont.svg#argoscondensed_book) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-@font-face {
-	font-family: argoscondensed_extrabold;
-	src: url(../fonts/argos-condensedextrabold-webfont.eot);
-	src: url(../fonts/argos-condensedextrabold-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/argos-condensedextrabold-webfont.woff) format("woff"), url(../fonts/argos-condensedextrabold-webfont.ttf) format("truetype"), url(../fonts/argos-condensedextrabold-webfont.svg#argoscondensed_extrabold) format("svg");
-	font-weight: 400;
-	font-style: normal
-}
-
-.argosbook, .argosbookitalic, .argoscompressedbold, .argoscondensedbook, .argoscondensedextrabold, .bodytext { color: #040404; text-shadow: none; font-weight: normal; }
-
-.argosbook { font-family: argosbook; }
-.argosbookitalic { font-family: argosbook_italic; }
-.argosbold { font-family: argosbold; }
-.argoscompressedbold { font-family: argoscompressedbold; }
-.argoscondensedbook { font-family: argoscondensed_book; }
-.argoscondensedextrabold { font-family: argoscondensed_extrabold; }
-.bodytext { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
-
-.mainheading { font-size: 20px; font-family: argosbook; }
-.subheading { font-size: 20px; font-family: argoscondensed_extrabold; }
-.prodtitle { font-size: 15px; font-family: argosbook; margin: 10px 0; font-weight: normal; }
-.mainprice { font-size: 30px; font-family: argoscondensed_extrabold; }
-.tlpprice { font-size: 30px; font-family: argoscondensed_extrabold; }
-.tlptitles { font-size: 18px; font-family: argosbook; }
-.wasprice { font-size: 13px; color: #777; font-family: argosbook_italic; }
-.saving { font-size: 16px; color: #EE3124; font-family: argoscondensed_extrabold; text-transform: uppercase; }
-.savingprice { font-size: 16px; color: #EE3124; font-family: argoscondensed_extrabold; }
+.mainheading { font-size: 20px; }
+.subheading { font-size: 20px; }
+.tlpprice { font-size: 30px; }
+.tlptitles { font-size: 18px; }
+.savingprice { font-size: 16px; color: #EE3124; }
 .headerlinks { font-size: 13px; }
-.catno { font-size: 12px; font-family: argosbook; margin: 10px 0; font-weight: normal; text-align: right; }
-
-.container {
-	width: 100%;
-	padding: 0 15px;
-	box-sizing: border-box;
-    clear: both;
-}
-.columns { position: relative; }
-.eight, .eleven, .five, .four, .nine, .one, .seven, .ten, .three, .twelve, .two {
-	margin-left: .83333%;
-	margin-right: .83333%;
-	float: left
-}
-.container:after {
-	content: " ";
-	display: block
-}
-.eight:after, .eight:before, .eleven:after, .eleven:before, .five:after, .five:before, .four:after, .four:before, .nine:after, .nine:before, .one:after, .one:before, .seven:after, .seven:before, .ten:after, .ten:before, .three:after, .three:before, .twelve:after, .twelve:before, .two:after, .two:before {
-	display: table;
-	content: ''
-}
-.one { width: 6.66667% }
-.two { width: 15% }
-.three { width: 23.33333% }
-.four {	width: 31.66667% }
-.five {	width: 40% }
-.six { width: 48.33333%; float: left; }
-.seven { width: 56.66667% }
-.eight { width: 65% }
-.nine { width: 73.33333% }
-.ten { width: 81.66667% }
-.eleven { width: 90% }
-.twelve { width: 98.33333% }
-
-body {
-    background-color: #FFF;
-    padding: 0;
-    margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-    font-family: argosbook;
-}
 
 .mainheader {
-    height: 60px;
     border-bottom: 1px solid #CCC;
     background-color: #F0F0F0;
     position: fixed;
@@ -177,7 +41,6 @@ body {
   display: block;
   font-size: 13px;
   color: #040404;
-  font-family: argosbook;
 }
 
 .headerbar .stores a { width: 47px; }
